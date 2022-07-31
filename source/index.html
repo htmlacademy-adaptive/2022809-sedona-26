@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <div class="page-container">
       <header class="page-header">
         <a class="page-header__logo">
@@ -25,7 +25,7 @@
               <a href="https://htmlacademy.ru/intensive/adaptive">HTML ACADEMY</a>
             </li>
           </ul>
-          <button class="page-navigation__toggle" type="button">
+          <button class="page-navigation__toggle toggle" type="button">
             <span class="visually-hidden">Показать меню.</span>
           </button>
         </nav>
@@ -40,57 +40,59 @@
           <ol class="advantages__list">
             <li class="advantages__item">
               <figure class="advantages__figure advantages__theme--dark">
-                <figcaption class="advantages__figcaption">
-                  <h3 class="advantages__title">Настоящий городок</h3>
-                  <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+                <figcaption class="advantages__figcaption advantages-item">
+                  <h3 class="advantages-item__title">Настоящий городок</h3>
+                  <p class="advantages-item__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
                 </figcaption>
-                <img class="advantages__image" src="" alt="Улицы Седоны">
+                <img class="advantages__image" src="img/sedona-street-mob.jpg" alt="Улицы Седоны">
               </figure>
               <ul class="advantages__sublist">
-                <li class="advantages__item">
-                  <h3 class="advantages__title">Жилье</h3>
-                  <p class="advantages__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                <li class="advantages__sublist-item sublist-item">
+                  <h3 class="sublist-item__title">Жилье</h3>
+                  <p class="sublist-item__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </li>
-                <li class="advantages__item">
-                  <h3 class="advantages__title">Еда</h3>
-                  <p class="advantages__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                <li class="advantages__sublist-item sublist-item">
+                  <h3 class="sublist-item__title">Еда</h3>
+                  <p class="sublist-item__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </li>
-                <li class="advantages__item">
-                  <h3 class="advantages__title">Сувениры</h3>
-                  <p class="advantages__description">Не только китайского, но и местного производства!</p>
+                <li class="advantages__sublist-item sublist-item">
+                  <h3 class="sublist-item__title">Сувениры</h3>
+                  <p class="sublist-item__description">Не только китайского, но и местного производства!</p>
                 </li>
               </ul>
             </li>
             <li class="advantages__item">
               <figure class="advantages__figure advantages__theme--dark">
-                <figcaption class="advantages__figcaption">
-                  <h3 class="advantages__title">Там есть мост дьявола</h3>
-                  <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+                <figcaption class="advantages__figcaption advantages-item">
+                  <h3 class="advantages-item__title">Там есть мост дьявола</h3>
+                  <p class="advantages-item__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
                 </figcaption>
-                <img class="advantages__image" src="" alt="Мост дьявола">
+                <img class="advantages__image" src="img/devil-bridge-mob.jpg" alt="Мост дьявола">
               </figure>
             </li>
-            <li class="advantages__item advantages__theme--medium">
-              <h3 class="advantages__title">Небольшая площадь</h3>
-              <p class="advantages__description">Все интересные места находятся очень близко</p>
+            <li class="advantages__item advantages__theme--medium advantages-item">
+              <h3 class="advantages-item__title">Небольшая площадь</h3>
+              <p class="advantages-item__description">Все интересные места находятся очень близко</p>
             </li>
-            <li class="advantages__item advantages__theme--medium">
-              <h3 class="advantages__title">Красивая дорога</h3>
-              <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <li class="advantages__item advantages__theme--medium advantages-item">
+              <h3 class="advantages-item__title">Красивая дорога</h3>
+              <p class="advantages-item__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
-            <li class="advantages__item advantages__theme--medium">
-              <h3 class="advantages__title">Мало туристов</h3>
-              <p class="advantages__description">Большинство едет в гранд каньон и толпится там</p>
+            <li class="advantages__item advantages__theme--medium advantages-item">
+              <h3 class="advantages-item__title">Мало туристов</h3>
+              <p class="advantages-item__description">Большинство едет в гранд каньон и толпится там</p>
             </li>
           </ol>
         </section>
         <section class="hotel-search">
-          <h2 class="hotel-search__heading">Заинтересовались?</h2>
+          <h2 class="visually-hidden">Поиск гостиницы в Седоне.</h2>
+          <p class="hotel-search__heading">Заинтересовались?</p>
           <p class="hotel-search__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <a class="hotel-search__button button" href="#">Найти гостиницу</a>
         </section>
         <div class="map">
-          <iframe src="" frameborder="0"></iframe>
+          <h2 class="visually-hidden">Седона на карте.</h2>
+          <iframe></iframe>
         </div>
       </main>
       <footer class="page-footer">
