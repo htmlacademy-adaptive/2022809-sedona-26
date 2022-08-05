@@ -1,13 +1,11 @@
 // Global
 @use "./fonts.scss";
 @use "./box-model.scss";
-@use "./color-variables.scss";
 
 // Blocks Index
 @use "./blocks/page.scss";
 @use "./blocks/body.scss";
 @use "./blocks/body-container.scss";
-@use "./blocks/page-header.scss";
 @use "./blocks/navigation.scss";
 @use "./blocks/main-container.scss";
 @use "./blocks/hero.scss";
@@ -32,4 +30,3 @@
 @use "./blocks/feedback.scss";
 @use "./blocks/feedback-form.scss";
 @use "./blocks/form-field.scss";
-
