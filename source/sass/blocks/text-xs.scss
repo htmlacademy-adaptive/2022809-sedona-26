@@ -1,0 +1,11 @@
+.text-xs {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+
+  &--extra {
+    font-weight: 700;
+  }
+}

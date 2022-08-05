@@ -1,0 +1,26 @@
+$basic-color: #81b3d2;
+
+.navigation {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: $basic-color;
+}
+
+.navigation__link {
+  display: flex;
+  justify-content: center;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+}

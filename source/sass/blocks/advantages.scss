@@ -1,0 +1,35 @@
+.advantages {
+  padding-top: 32px;
+}
+
+.advantages__heading-wrapper {
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.advantages__subtitle {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.advantages__list,
+.advantages__unit,
+.advantages__figure,
+.advantages__sublist {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.advantages__image {
+  margin: 0 auto;
+}
+
+

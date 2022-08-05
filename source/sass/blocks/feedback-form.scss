@@ -1,0 +1,42 @@
+.feedback-form {
+  display: grid;
+  padding: 0 20px;
+}
+
+.feedback-form__group {
+  display: grid;
+  gap: 16px;
+  padding-top: 24px;
+
+  &--extra {
+    gap: 3px;
+  }
+}
+
+.feedback-form__title {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.feedback-form__list {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.form-field__control {
+  width: 100%;
+}
+
+.feedback-form__legend {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 12px;
+  line-height: 21px;
+  font-weight: 400;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+

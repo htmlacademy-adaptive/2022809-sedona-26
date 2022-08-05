@@ -1,0 +1,28 @@
+.advantages-item {
+  min-height: 167px;
+
+  &--dark {
+    background-color: #81b3d2;
+  }
+
+  &--medium {
+    background-color: #eeeeee;
+  }
+}
+
+.advantages-item__title {
+  margin: 0;
+  margin-bottom: 49px;
+}
+
+.advantages-item__description {
+  margin: 0;
+}
+
+.advantages-item__sublist-title {
+  margin: 8px 0 16px;
+}
+
+.advantages-item__sublist-description {
+  margin: 0;
+}

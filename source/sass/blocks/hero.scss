@@ -1,0 +1,21 @@
+.hero {
+  padding: 90px 0 85px;
+  background-image:
+    url("../img/mobile-img/banner-mob.jpg"),
+    linear-gradient(0deg, rgba(129,179,210,1) 0%, rgba(255,255,255,1) 100%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto auto;
+
+  &--size-small {
+    padding: 52px 0 67px;
+    background-image:
+      url("../img/mobile-img/banner-small-mob.jpg"),
+      linear-gradient(0deg, rgba(129,179,210,1) 0%, rgba(255,255,255,1) 100%);
+  }
+}
+
+.hero__image {
+  display: block;
+  margin: 0 auto;
+}

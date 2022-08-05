@@ -1,0 +1,24 @@
+.form-field {
+  display: flex;
+
+  &--extra {
+    flex-direction: column;
+  }
+}
+
+.form-field__label {
+  margin-left: 16px;
+
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+
+  &--extra {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}

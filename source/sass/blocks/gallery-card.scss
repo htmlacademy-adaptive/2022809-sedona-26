@@ -1,0 +1,26 @@
+.gallery-card {
+  padding: 24px 20px 25px;
+}
+
+.gallery-card__link {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.gallery-card__content {
+  display: grid;
+}
+
+.gallery-card__title {
+  margin: 0;
+  margin-bottom: 1px;
+}
+
+.gallery-card__author {
+  margin: 0;
+  margin-bottom: 11px;
+}
+
+.gallery-card__like {
+  margin: 0;
+}

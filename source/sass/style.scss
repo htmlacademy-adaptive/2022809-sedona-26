@@ -1,1 +1,35 @@
-// Начните писать стили здесь
+// Global
+@use "./fonts.scss";
+@use "./box-model.scss";
+@use "./color-variables.scss";
+
+// Blocks Index
+@use "./blocks/page.scss";
+@use "./blocks/body.scss";
+@use "./blocks/body-container.scss";
+@use "./blocks/page-header.scss";
+@use "./blocks/navigation.scss";
+@use "./blocks/main-container.scss";
+@use "./blocks/hero.scss";
+@use "./blocks/advantages.scss";
+@use "./blocks/advantages-item.scss";
+@use "./blocks/heading-title.scss";
+@use "./blocks/heading-subtitle.scss";
+@use "./blocks/visually-hidden.scss";
+@use "./blocks/hotel-search.scss";
+@use "./blocks/map.scss";
+@use "./blocks/page-footer.scss";
+@use "./blocks/copyright.scss";
+@use "./blocks/social.scss";
+
+// Blocks Catalog
+@use "./blocks/gallery.scss";
+@use "./blocks/gallery-card.scss";
+@use "./blocks/text-xs.scss";
+@use "./blocks/promo.scss";
+
+// Blocks Form
+@use "./blocks/feedback.scss";
+@use "./blocks/feedback-form.scss";
+@use "./blocks/form-field.scss";
+

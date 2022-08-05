@@ -1,0 +1,19 @@
+.heading-subtitle {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--light {
+    color: #ffffff;
+  }
+
+  &--extra {
+    font-weight: 700;
+    text-align: left;
+  }
+}
+

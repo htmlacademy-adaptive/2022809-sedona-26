@@ -1,0 +1,17 @@
+.heading-title {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--light {
+    color: #ffffff;
+  }
+
+  &--extra {
+    font-size: 21px;
+  }
+}
