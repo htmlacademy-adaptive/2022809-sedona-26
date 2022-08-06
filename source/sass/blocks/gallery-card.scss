@@ -1,3 +1,5 @@
+@use "./../mixins/mixins.scss";
+
 .gallery-card {
   padding: 24px 20px 25px;
 }
@@ -22,5 +24,15 @@
 }
 
 .gallery-card__like {
+  position: relative;
   margin: 0;
+  margin-left: 38px;
+
+  &::before {
+    @include mixins.before-after(absolute, 23px, 21px);
+    left: -38px;
+    background-image: url("../img/icons/like-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
