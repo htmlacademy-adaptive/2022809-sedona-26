@@ -1,5 +1,8 @@
+@use "./../variables/color-variables.scss";
+
 .body {
-  background-color: #f2f2f2;
+  max-width: 320px;
+  background-color: color-variables.$inert-light;
 }
 
 .body__container {

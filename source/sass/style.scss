@@ -1,12 +1,17 @@
 // Global
-@use "./fonts.scss";
-@use "./box-model.scss";
+@use "./global/fonts.scss";
+@use "./global/box-model.scss";
+
+//Variables
+@use "./variables/color-variables.scss";
 
 // Blocks Index
 @use "./blocks/page.scss";
 @use "./blocks/body.scss";
 @use "./blocks/body-container.scss";
+@use "./blocks/page-header.scss";
 @use "./blocks/navigation.scss";
+@use "./blocks/toggle.scss";
 @use "./blocks/main-container.scss";
 @use "./blocks/hero.scss";
 @use "./blocks/advantages.scss";

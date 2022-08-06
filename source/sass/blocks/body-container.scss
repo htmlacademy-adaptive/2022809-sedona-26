@@ -1,5 +1,7 @@
+@use "./../variables/color-variables.scss";
+
 .body-container {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: color-variables.$add-color-light;
 }

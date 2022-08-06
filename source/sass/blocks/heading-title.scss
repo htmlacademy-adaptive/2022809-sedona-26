@@ -1,14 +1,16 @@
+@use "./../variables/color-variables.scss";
+
 .heading-title {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  color: #000000;
+  color: color-variables.$basic-text;
   text-align: center;
   text-transform: uppercase;
 
   &--light {
-    color: #ffffff;
+    color: color-variables.$add-color-light;
   }
 
   &--extra {

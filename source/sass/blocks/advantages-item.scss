@@ -1,12 +1,14 @@
+@use "./../variables/color-variables.scss";
+
 .advantages-item {
   min-height: 167px;
 
   &--dark {
-    background-color: #81b3d2;
+    background-color: color-variables.$basic-color;
   }
 
   &--medium {
-    background-color: #eeeeee;
+    background-color: color-variables.$add-color;
   }
 }
 

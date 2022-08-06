@@ -1,3 +1,5 @@
+@use "./../variables/color-variables.scss";
+
 .form-field {
   display: flex;
 
@@ -13,7 +15,7 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  color: #000000;
+  color: color-variables.$basic-text;
 
   &--extra {
     font-size: 14px;
