@@ -41,7 +41,7 @@
             <p class="feedback__subtitle heading-subtitle">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           </div>
           <form class="feedback__form feedback-form" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="feedback-form__group">
+            <div class="feedback-form__group feedback-form__group--name">
               <h2 class="feedback-form__title heading-title">Представьтесь:</h2>
               <label class="feedback-form__field form-field form-field--extra">
                 <span class="form-field__label form-field__label--extra">Имя*:</span>
@@ -56,7 +56,7 @@
                 <input class="form-field__control input" type="text" name="applicant-patronymic" id="applicant-patronymic" placeholder="Введите отчество">
               </label>
             </div>
-            <div class="feedback-form__group">
+            <div class="feedback-form__group feedback-form__group--contacts">
               <h2 class="feedback-form__title heading-title">Контактная информация:</h2>
               <label class="feedback-form__field form-field form-field--extra form-field--icon-tel">
                 <span class="form-field__label form-field__label--extra">Контактный телефон*:</span>
@@ -67,65 +67,65 @@
                 <input class="form-field__control input" type="email" name="applicant-email" id="applicant-email" placeholder="Введите e-mail">
               </label>
             </div>
-            <div class="feedback-form__group">
+            <div class="feedback-form__group feedback-form__group--impression">
               <h2 class="feedback-form__title heading-title">Ваше общее впечатление:</h2>
               <ul class="feedback-form__list">
                 <li class="feedback-form__item">
-                  <label class="feedback-form__field form-field">
+                  <label class="feedback-form__field form-field form-field--pick">
                     <input class="form-field__control input-radio visually-hidden" type="radio" value="positive" name="impression">
-                    <span class="form-field__label">Скорее положительное</span>
+                    <span class="form-field__label input-radio__label">Скорее положительное</span>
                   </label>
                 </li>
                 <li class="feedback-form__item">
-                  <label class="feedback-form__field form-field">
+                  <label class="feedback-form__field form-field form-field--pick">
                     <input class="form-field__control input-radio visually-hidden" type="radio" value="negative" name="impression">
-                    <span class="form-field__label">Скорее отрицательное</span>
+                    <span class="form-field__label input-radio__label">Скорее отрицательное</span>
                   </label>
                 </li>
                 <li class="feedback-form__item">
-                  <label class="feedback-form__field form-field">
+                  <label class="feedback-form__field form-field form-field--pick">
                     <input class="form-field__control input-radio visually-hidden" type="radio" value="neutral" name="impression">
-                    <span class="form-field__label">Затрудняюсь ответить</span>
+                    <span class="form-field__label input-radio__label">Затрудняюсь ответить</span>
                   </label>
                 </li>
               </ul>
             </div>
-            <div class="feedback-form__group">
+            <div class="feedback-form__group feedback-form__group--places">
               <h2 class="feedback-form__title heading-title">Посещенные достопримечательности:</h2>
               <ul class="feedback-form__list">
                 <li class="feedback-form__item">
-                  <label class="feedback-form__field form-field">
-                    <input class="form-field__control input-ckeckbox visually-hidden" type="checkbox" name="devil-bridge">
-                    <span class="form-field__label">Мост Дьявола</span>
+                  <label class="feedback-form__field form-field form-field--pick">
+                    <input class="form-field__control input-checkbox visually-hidden" type="checkbox" name="devil-bridge">
+                    <span class="form-field__label input-checkbox__label">Мост Дьявола</span>
                   </label>
                 </li>
                 <li class="feedback-form__item">
-                  <label class="feedback-form__field form-field">
-                    <input class="form-field__control input-ckeckbox visually-hidden" type="checkbox" name="mountain-bell">
-                    <span class="form-field__label">Гора-Колокол</span>
+                  <label class="feedback-form__field form-field form-field--pick">
+                    <input class="form-field__control input-checkbox visually-hidden" type="checkbox" name="mountain-bell">
+                    <span class="form-field__label input-checkbox__label">Гора-Колокол</span>
                   </label>
                 </li>
                 <li class="feedback-form__item">
-                  <label class="feedback-form__field form-field">
-                    <input class="form-field__control input-ckeckbox visually-hidden" type="checkbox" name="slide-park">
-                    <span class="form-field__label">Слайд-парк</span>
+                  <label class="feedback-form__field form-field form-field--pick">
+                    <input class="form-field__control input-checkbox visually-hidden" type="checkbox" name="slide-park">
+                    <span class="form-field__label input-checkbox__label">Слайд-парк</span>
                   </label>
                 </li>
                 <li class="feedback-form__item">
-                  <label class="feedback-form__field form-field">
-                    <input class="form-field__control input-ckeckbox visually-hidden" type="checkbox" name="red-rocks">
-                    <span class="form-field__label">Красные скалы</span>
+                  <label class="feedback-form__field form-field form-field--pick">
+                    <input class="form-field__control input-checkbox visually-hidden" type="checkbox" name="red-rocks">
+                    <span class="form-field__label input-checkbox__label">Красные скалы</span>
                   </label>
                 </li>
               </ul>
             </div>
-            <div class="feedback-form__group">
+            <div class="feedback-form__group feedback-form__group--review">
               <h2 class="feedback-form__title heading-title">Опишите свои эмоции:</h2>
-              <label class="feedback-form__field form-field">
+              <label class="feedback-form__field form-field form-field--textarea">
                 <textarea class="form-field__control textarea" name="review-text" id="review-text" placeholder="Опишите подробно все свои восторги "></textarea>
               </label>
             </div>
-            <div class="feedback-form__group feedback-form__group--extra">
+            <div class="feedback-form__group feedback-form__group--submit">
               <button class="feedback-form__button button" type="submit">Отправить отзыв</button>
               <small class="feedback-form__legend">* — обязательные поля</small>
             </div>

@@ -1,8 +1,7 @@
 @use "./../variables/color-variables.scss";
 
-.input {
-  height: 58px;
-  padding: 16px 58px 16px 16px;
+.textarea {
+  padding: 16px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -12,6 +11,7 @@
 
   background-color: color-variables.$inert-light;
   border: none;
+  resize: none;
 
   &::placeholder {
     color: rgba(color-variables.$basic-text, 0.3);

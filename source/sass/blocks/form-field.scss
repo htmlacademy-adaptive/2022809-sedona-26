@@ -14,6 +14,9 @@
     right: 0;
     bottom: 0;
     background-color: #e6e6e6;
+    background-image: url("../img/icons/phone.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &--icon-email::after {
@@ -21,11 +24,27 @@
     right: 0;
     bottom: 0;
     background-color: #e6e6e6;
+    background-image: url("../img/icons/envelope.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--pick {
+    height: 46px;
+    align-items: center;
+  }
+
+  &--textarea {
+    height: 150px;
   }
 }
 
+.form-field__control {
+  width: 100%;
+}
+
 .form-field__label {
-  margin-left: 16px;
+  margin-left: 62px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -34,6 +53,7 @@
   color: color-variables.$basic-text;
 
   &--extra {
+    margin-left: 16px;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;

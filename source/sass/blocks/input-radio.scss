@@ -1,0 +1,22 @@
+@use "./../mixins/mixins.scss";
+@use "./../variables/color-variables.scss";
+
+.input-radio:checked + .input-radio__label::after {
+  @include mixins.before-after(absolute, 16px, 16px);
+  top: 50%;
+  left: 16px;
+  transform: translate(0, -50%);
+
+  background-color: color-variables.$basic-text;
+  border-radius: 50%;
+}
+
+.input-radio__label::before {
+  @include mixins.before-after(absolute, 46px, 46px);
+  top: 0;
+  left: 0;
+  background-color: color-variables.$inert-light;
+  border-radius: 50%;
+}
+
+
