@@ -1,9 +1,9 @@
 // Global
 @use "./global/fonts.scss";
 @use "./global/box-model.scss";
-
-//Variables
+@use "./mixins/mixins.scss";
 @use "./variables/color-variables.scss";
+
 
 // Blocks Index
 @use "./blocks/page.scss";
@@ -35,3 +35,4 @@
 @use "./blocks/feedback.scss";
 @use "./blocks/feedback-form.scss";
 @use "./blocks/form-field.scss";
+@use "./blocks/input.scss";
