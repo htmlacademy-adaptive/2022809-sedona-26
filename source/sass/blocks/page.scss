@@ -1,8 +1,20 @@
+@use "./../variables/color-variables.scss";
+
 .page {
   height: 100%;
 }
 
 .page__body {
+  max-width: 320px;
   height: 100%;
   margin: 0;
+  background-color: color-variables.$inert-light;
+}
+
+.page__container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: color-variables.$add-color-light;
 }

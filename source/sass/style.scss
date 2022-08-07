@@ -1,14 +1,11 @@
 // Global
 @use "./global/fonts.scss";
 @use "./global/box-model.scss";
-@use "./mixins/mixins.scss";
 @use "./variables/color-variables.scss";
-
+@use "./mixins/mixins.scss";
 
 // Blocks Index
 @use "./blocks/page.scss";
-@use "./blocks/body.scss";
-@use "./blocks/body-container.scss";
 @use "./blocks/page-header.scss";
 @use "./blocks/navigation.scss";
 @use "./blocks/toggle.scss";
@@ -28,6 +25,7 @@
 // Blocks Catalog
 @use "./blocks/gallery.scss";
 @use "./blocks/gallery-card.scss";
+@use "./blocks/button-like.scss";
 @use "./blocks/text-xs.scss";
 @use "./blocks/promo.scss";
 

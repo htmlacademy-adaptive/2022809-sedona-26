@@ -24,15 +24,11 @@
 }
 
 .gallery-card__like {
-  position: relative;
   margin: 0;
-  margin-left: 38px;
+}
 
-  &::before {
-    @include mixins.before-after(absolute, 23px, 21px);
-    left: -38px;
-    background-image: url("../img/icons/like-icon.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+.gallery-card__button {
+  margin-right: 14px;
+  width: 23px;
+  height: 21px;
 }
