@@ -1,0 +1,16 @@
+@use "./../mixins/mixins.scss";
+@use "./../variables/color-variables.scss";
+
+.input-checkbox:checked + .input-checkbox__label::before {
+  background-image: url("../img/icons/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input-checkbox__label::before {
+  @include mixins.before-after(absolute, 46px, 46px);
+  top: 0;
+  left: 0;
+  background-color: color-variables.$inert-light;
+  border-radius: 4px;
+}

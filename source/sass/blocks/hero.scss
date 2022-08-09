@@ -1,0 +1,30 @@
+@use "./../mixins/mixins.scss";
+
+.hero {
+  position: relative;
+  padding: 90px 19px 85px;
+  background-image: url("../img/index/banner-mob.jpg"), linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto auto;
+
+  &--size-small {
+    padding-top: 52px;
+    background-image: url("../img/catalog/banner-small-mob.jpg"), linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+
+  &::after {
+    @include mixins.before-after(absolute, 100%, 57px);
+    bottom: 0;
+    left: 0;
+    background-image: url("../img/index/hero-divider.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.hero__image {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}

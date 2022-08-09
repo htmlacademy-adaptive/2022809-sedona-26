@@ -1,0 +1,91 @@
+@use "./../mixins/mixins.scss";
+
+.advantages {
+  padding-top: 32px;
+}
+
+.advantages__heading-wrapper {
+  margin: 0 auto;
+  padding: 0 25px 16px;
+}
+
+.advantages__title {
+  margin-bottom: 35px;
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  counter-reset: number;
+}
+
+.advantages__unit {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.advantages__figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.advantages__image {
+  margin: 0 auto;
+}
+
+.advantages__sublist {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 23px 18px 30px;
+  list-style-type: none;
+}
+
+.advantages__sublist-item {
+  position: relative;
+  margin-bottom: 22px;
+
+  &--house::before {
+    @include mixins.before-after(absolute, 40px, 40px);
+    top: 0;
+    left: 0;
+    background-image: url("../img/icons/house.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--food::before {
+    @include mixins.before-after(absolute, 40px, 40px);
+    top: 0;
+    left: 0;
+    background-image: url("../img/icons/food.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--gift::before {
+    @include mixins.before-after(absolute, 40px, 40px);
+    top: 0;
+    left: 0;
+    background-image: url("../img/icons/gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.advantages__sublist-title {
+  margin: 8px 0 16px 47px;
+}
+
+.advantages__sublist-description {
+  margin-left: 47px;
+}

@@ -1,0 +1,25 @@
+.promo {
+  position: relative;
+  padding: 17px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promo__heading-wrapper {
+  padding: 0 20px;
+}
+
+.promo__title {
+  margin-bottom: 27px;
+}
+
+.promo__subtitle {
+  margin-bottom: 38px;
+}
+
+.promo__button {
+  position: absolute;
+  bottom: 60px;
+  left: 144px;
+}

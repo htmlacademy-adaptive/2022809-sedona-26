@@ -1,0 +1,21 @@
+@use "./../variables/color-variables.scss";
+
+.page-header {
+  position: relative;
+  min-height: 56px;
+  background-color: color-variables.$add-color-light;
+}
+
+.page-header__toggle {
+  position: absolute;
+  z-index: 2;
+  top: 17px;
+  right: 20px;
+}
+
+.page-header__logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}

@@ -1,0 +1,58 @@
+@use "./../mixins/mixins.scss";
+@use "./../variables/color-variables.scss";
+
+.advantages-item {
+  position: relative;
+
+  &--number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &--number::before {
+    display: block;
+    counter-increment: number;
+    content: "— №" counter(number) " —";
+    order: 1;
+    margin-bottom: 17px;
+
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: inherit;
+  }
+
+  &--dark {
+    padding: 39px 16px 35px;
+    color: color-variables.$add-color-light;
+    background-color: color-variables.$basic-color;
+  }
+
+  &--medium {
+    padding: 25px 35px;
+    color: color-variables.$basic-text-medium;
+    background-color: color-variables.$add-color;
+  }
+
+  &--divider {
+    padding: 70px 16px 40px;
+
+    &::after {
+      @include mixins.before-after(absolute, 100%, 37px);
+      top: 0;
+      background-image: url("../img/index/advantages-divider.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.advantages-item__title {
+  margin-bottom: 11px;
+}
+
+.advantages-item__description {
+  order: 2;
+}

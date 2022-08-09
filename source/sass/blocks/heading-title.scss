@@ -1,0 +1,25 @@
+@use "./../variables/color-variables.scss";
+
+.heading-title {
+  margin: 0;
+
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: color-variables.$basic-text;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--light {
+    color: color-variables.$add-color-light;
+  }
+
+  &--extra {
+    font-size: 21px;
+  }
+
+  &--lr {
+    text-align: left;
+  }
+}

@@ -1,0 +1,19 @@
+@use "./../variables/color-variables.scss";
+
+.input {
+  height: 58px;
+  padding: 16px 58px 16px 16px;
+
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  color: color-variables.$basic-text;
+  font-weight: 700;
+
+  background-color: color-variables.$inert-light;
+  border: none;
+
+  &::placeholder {
+    color: rgba(color-variables.$basic-text, 0.3);
+  }
+}
