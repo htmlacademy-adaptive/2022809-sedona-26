@@ -28,13 +28,13 @@
 }
 
 .navigation__link {
-  display: flex;
-  justify-content: center;
+  display: block;
   padding: 17px 18px 12px;
 
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
   color: color-variables.$add-color-light;
   text-decoration: none;

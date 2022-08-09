@@ -6,6 +6,8 @@
 
 // Blocks Index
 @use "./blocks/page.scss";
+@use "./blocks/heading-title.scss";
+@use "./blocks/heading-subtitle.scss";
 @use "./blocks/page-header.scss";
 @use "./blocks/navigation.scss";
 @use "./blocks/toggle.scss";
@@ -13,8 +15,6 @@
 @use "./blocks/hero.scss";
 @use "./blocks/advantages.scss";
 @use "./blocks/advantages-item.scss";
-@use "./blocks/heading-title.scss";
-@use "./blocks/heading-subtitle.scss";
 @use "./blocks/visually-hidden.scss";
 @use "./blocks/hotel-search.scss";
 @use "./blocks/button.scss";
@@ -24,10 +24,10 @@
 @use "./blocks/social.scss";
 
 // Blocks Catalog
+@use "./blocks/text-xs.scss";
 @use "./blocks/gallery.scss";
 @use "./blocks/gallery-card.scss";
 @use "./blocks/button-like.scss";
-@use "./blocks/text-xs.scss";
 @use "./blocks/promo.scss";
 @use "./blocks/button-play.scss";
 

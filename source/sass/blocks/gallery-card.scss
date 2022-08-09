@@ -14,21 +14,21 @@
 }
 
 .gallery-card__title {
-  margin: 0;
   margin-bottom: 1px;
 }
 
 .gallery-card__author {
-  margin: 0;
   margin-bottom: 11px;
 }
 
 .gallery-card__like {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
   margin: 0;
 }
 
 .gallery-card__button {
-  margin-right: 14px;
   width: 23px;
   height: 21px;
 }
