@@ -7,11 +7,13 @@
 }
 
 .navigation__list {
-  display: flex;
-  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @include tablet {
+    display: flex;
+  }
 }
 
 .navigation__item {
@@ -24,6 +26,19 @@
 
   &:last-child {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 87%, rgba(0, 0, 0, 0.2) 100%);
+  }
+
+  @include tablet {
+    background-color: color-variables.$add-color-light;
+    box-shadow: none;
+
+    &:first-child {
+      box-shadow: none;
+    }
+
+    &:last-child {
+      background-image: none;
+    }
   }
 }
 
@@ -38,4 +53,10 @@
   text-transform: uppercase;
   color: color-variables.$add-color-light;
   text-decoration: none;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 21px;
+    color: color-variables.$basic-text;
+  }
 }

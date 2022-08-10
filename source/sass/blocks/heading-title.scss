@@ -11,15 +11,15 @@
   text-align: center;
   text-transform: uppercase;
 
+  @include tablet {
+    font-size: 21px;
+  }
+
   &--light {
     color: color-variables.$add-color-light;
   }
 
   &--extra {
     font-size: 21px;
-  }
-
-  &--lr {
-    text-align: left;
   }
 }

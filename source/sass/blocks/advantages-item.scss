@@ -28,24 +28,48 @@
     padding: 39px 16px 35px;
     color: color-variables.$add-color-light;
     background-color: color-variables.$basic-color;
+
+    @include tablet {
+      padding: 42px 32px;
+    }
   }
 
   &--medium {
     padding: 25px 35px;
     color: color-variables.$basic-text-medium;
     background-color: color-variables.$add-color;
+
+    @include tablet {
+      padding: 42px 32px;
+    }
   }
 
-  &--divider {
+  &--primary {
     padding: 70px 16px 40px;
+
+    @include tablet {
+      padding: 42px 32px;
+    }
 
     &::after {
       @include mixins.before-after(absolute, 100%, 37px);
       top: 0;
+      left: 50%;
+      transform: translate(-50%);
       background-image: url("../img/index/advantages-divider.svg");
       background-repeat: no-repeat;
       background-size: cover;
+
+      @include tablet {
+        display: none;
+      }
     }
+  }
+
+  @include tablet {
+    flex-basis: 33.33%;
+    justify-content: center;
+    min-height: 256px;
   }
 }
 

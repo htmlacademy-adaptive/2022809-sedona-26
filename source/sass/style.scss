@@ -1,41 +1,41 @@
 // Global
-@use "./global/fonts.scss";
-@use "./global/box-model.scss";
-@use "./variables/color-variables.scss";
-@use "./mixins/mixins.scss";
+@import "./mixins/mixins.scss";
+@import "./variables/color-variables.scss";
+@import "./global/fonts.scss";
+@import "./global/box-model.scss";
 
 // Blocks Index
-@use "./blocks/page.scss";
-@use "./blocks/heading-title.scss";
-@use "./blocks/heading-subtitle.scss";
-@use "./blocks/page-header.scss";
-@use "./blocks/navigation.scss";
-@use "./blocks/toggle.scss";
-@use "./blocks/main-container.scss";
-@use "./blocks/hero.scss";
-@use "./blocks/advantages.scss";
-@use "./blocks/advantages-item.scss";
-@use "./blocks/visually-hidden.scss";
-@use "./blocks/hotel-search.scss";
-@use "./blocks/button.scss";
-@use "./blocks/map.scss";
-@use "./blocks/page-footer.scss";
-@use "./blocks/copyright.scss";
-@use "./blocks/social.scss";
+@import "./blocks/page.scss";
+@import "./blocks/heading-title.scss";
+@import "./blocks/heading-subtitle.scss";
+@import "./blocks/page-header.scss";
+@import "./blocks/navigation.scss";
+@import "./blocks/toggle.scss";
+@import "./blocks/main-container.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/advantages-item.scss";
+@import "./blocks/visually-hidden.scss";
+@import "./blocks/hotel-search.scss";
+@import "./blocks/button.scss";
+@import "./blocks/map.scss";
+@import "./blocks/page-footer.scss";
+@import "./blocks/copyright.scss";
+@import "./blocks/social.scss";
 
 // Blocks Catalog
-@use "./blocks/text-xs.scss";
-@use "./blocks/gallery.scss";
-@use "./blocks/gallery-card.scss";
-@use "./blocks/button-like.scss";
-@use "./blocks/promo.scss";
-@use "./blocks/button-play.scss";
+@import "./blocks/text-xs.scss";
+@import "./blocks/gallery.scss";
+@import "./blocks/gallery-card.scss";
+@import "./blocks/button-like.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/button-play.scss";
 
 // Blocks Form
-@use "./blocks/feedback.scss";
-@use "./blocks/feedback-form.scss";
-@use "./blocks/form-field.scss";
-@use "./blocks/input.scss";
-@use "./blocks/input-radio.scss";
-@use "./blocks/input-checkbox.scss";
-@use "./blocks/textarea.scss";
+@import "./blocks/feedback.scss";
+@import "./blocks/feedback-form.scss";
+@import "./blocks/form-field.scss";
+@import "./blocks/input.scss";
+@import "./blocks/input-radio.scss";
+@import "./blocks/input-checkbox.scss";
+@import "./blocks/textarea.scss";
