@@ -1,4 +1,4 @@
-@use "./../mixins/mixins.scss";
+@use "./../mixins";
 
 .hero {
   position: relative;
@@ -8,12 +8,12 @@
   background-position: center center;
   background-size: cover;
 
-  @include tablet {
+  @include mixins.tablet {
     padding: 77px 60px 91px;
     background-image: url("../img/index/banner-tab.jpg"), linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding: 78px 120px 90px;
     background-image: url("../img/index/banner-desk.jpg"), linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
   }
@@ -22,12 +22,12 @@
     padding: 52px 19px 67px;
     background-image: url("../img/catalog/banner-small-mob.jpg"), linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
 
-    @include tablet {
+    @include mixins.tablet {
       padding: 95px 60px 117px;
       background-image: url("../img/catalog/banner-small-tab.jpg"), linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
     }
 
-    @include desktop {
+    @include mixins.desktop {
       padding: 101px 120px 120px;
       background-image: url("../img/catalog/banner-small-desk.jpg"), linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
     }
@@ -43,11 +43,11 @@
     background-position: center;
     background-size: 100% auto;
 
-    @include tablet {
+    @include mixins.tablet {
       background-image: url("../img/index/hero-divider-tab.svg");
     }
 
-    @include desktop {
+    @include mixins.desktop {
       bottom: -1px;
       background-image: url("../img/index/hero-divider-desk.svg");
     }
@@ -60,7 +60,7 @@
   margin: 0 auto;
   object-fit: contain;
 
-  @include tablet {
+  @include mixins.tablet {
     width: 460px;
     height: auto;
   }

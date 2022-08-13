@@ -1,40 +1,36 @@
+@use "./../mixins";
+
 .hotel-search {
   padding: 39px 18px 49px;
 
-  @include tablet {
+  @include mixins.tablet {
     padding: 61px 155px 58px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding: 61px 371px 66px;
   }
 }
 
 .hotel-search__heading-wrapper {
-  @include tablet {
-    padding: 0 60px;
+  padding-bottom: 32px;
+
+  @include mixins.tablet {
+    padding: 0 60px 41px;
+  }
+
+  @include mixins.desktop {
+    padding: 0 60px 46px;
   }
 }
 
 .hotel-search__title {
   margin-bottom: 20px;
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 30px;
     line-height: 26px;
     margin-bottom: 24px;
-  }
-}
-
-.hotel-search__subtitle {
-  margin-bottom: 32px;
-
-  @include tablet {
-    margin-bottom: 41px;
-  }
-
-  @include desktop {
-    margin-bottom: 46px;
   }
 }
 

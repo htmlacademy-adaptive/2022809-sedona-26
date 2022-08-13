@@ -1,4 +1,4 @@
-@use "./../variables/color-variables.scss";
+@use "./../variables";
 
 .heading-subtitle {
   margin: 0;
@@ -6,12 +6,12 @@
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: color-variables.$basic-text-medium;
+  color: variables.$basic-text-medium;
   text-align: center;
   text-transform: uppercase;
 
   &--light {
-    color: color-variables.$add-color-light;
+    color: variables.$add-color-light;
   }
 
   &--extra {

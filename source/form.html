@@ -43,32 +43,36 @@
           <form class="feedback__form feedback-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="feedback-form__group feedback-form__group--name">
               <h2 class="feedback-form__title heading-title">Представьтесь:</h2>
-              <label class="feedback-form__field form-field form-field--extra">
-                <span class="form-field__label form-field__label--extra">Имя*:</span>
-                <input class="form-field__control input" type="text" name="applicant-name" id="applicant-name" placeholder="Введите имя">
-              </label>
-              <label class="feedback-form__field form-field form-field--extra">
-                <span class="form-field__label form-field__label--extra">Фамилия*:</span>
-                <input class="form-field__control input" type="text" name="applicant-surname" id="applicant-surname" placeholder="Введите фамилию">
-              </label>
-              <label class="feedback-form__field form-field form-field--extra">
-                <span class="form-field__label form-field__label--extra">Отчество:</span>
-                <input class="form-field__control input" type="text" name="applicant-patronymic" id="applicant-patronymic" placeholder="Введите отчество">
-              </label>
+              <div class="feedback-form__wrapper">
+                <label class="feedback-form__field form-field form-field--extra">
+                  <span class="form-field__label form-field__label--extra">Имя*:</span>
+                  <input class="form-field__control input" type="text" name="applicant-name" id="applicant-name" placeholder="Введите имя">
+                </label>
+                <label class="feedback-form__field form-field form-field--extra">
+                  <span class="form-field__label form-field__label--extra">Фамилия*:</span>
+                  <input class="form-field__control input" type="text" name="applicant-surname" id="applicant-surname" placeholder="Введите фамилию">
+                </label>
+                <label class="feedback-form__field form-field form-field--extra">
+                  <span class="form-field__label form-field__label--extra">Отчество:</span>
+                  <input class="form-field__control input" type="text" name="applicant-patronymic" id="applicant-patronymic" placeholder="Введите отчество">
+                </label>
+              </div>
             </div>
             <div class="feedback-form__group feedback-form__group--contacts">
-              <h2 class="feedback-form__title heading-title">Контактная информация:</h2>
-              <label class="feedback-form__field form-field form-field--extra form-field--icon-tel">
-                <span class="form-field__label form-field__label--extra">Контактный телефон*:</span>
-                <input class="form-field__control input" type="tel" name="applicant-phone" id="applicant-phone" placeholder="Введите телефон">
-              </label>
-              <label class="feedback-form__field form-field form-field--extra form-field--icon-email">
-                <span class="form-field__label form-field__label--extra">Электронная почта*:</span>
-                <input class="form-field__control input" type="email" name="applicant-email" id="applicant-email" placeholder="Введите e-mail">
-              </label>
+              <h2 class="feedback-form__title feedback-form__title--extra heading-title">Контактная информация:</h2>
+              <div class="feedback-form__wrapper feedback-form__wrapper--extra">
+                <label class="feedback-form__field form-field form-field--extra form-field--icon-tel">
+                  <span class="form-field__label form-field__label--extra">Контактный телефон*:</span>
+                  <input class="form-field__control input" type="tel" name="applicant-phone" id="applicant-phone" placeholder="Введите телефон">
+                </label>
+                <label class="feedback-form__field form-field form-field--extra form-field--icon-email">
+                  <span class="form-field__label form-field__label--extra">Электронная почта*:</span>
+                  <input class="form-field__control input" type="email" name="applicant-email" id="applicant-email" placeholder="Введите e-mail">
+                </label>
+              </div>
             </div>
             <div class="feedback-form__group feedback-form__group--impression">
-              <h2 class="feedback-form__title heading-title">Ваше общее впечатление:</h2>
+              <h2 class="feedback-form__title feedback-form__title--on-border heading-title">Ваше общее впечатление:</h2>
               <ul class="feedback-form__list">
                 <li class="feedback-form__item">
                   <label class="feedback-form__field form-field form-field--pick">
@@ -91,8 +95,8 @@
               </ul>
             </div>
             <div class="feedback-form__group feedback-form__group--places">
-              <h2 class="feedback-form__title heading-title">Посещенные достопримечательности:</h2>
-              <ul class="feedback-form__list">
+              <h2 class="feedback-form__title feedback-form__title--on-border heading-title"><span class="feedback-form__title-wrap">Посещенные достопримечательности:</span></h2>
+              <ul class="feedback-form__list feedback-form__list--extra">
                 <li class="feedback-form__item">
                   <label class="feedback-form__field form-field form-field--pick">
                     <input class="form-field__control input-checkbox visually-hidden" type="checkbox" name="devil-bridge">
@@ -120,12 +124,12 @@
               </ul>
             </div>
             <div class="feedback-form__group feedback-form__group--review">
-              <h2 class="feedback-form__title heading-title">Опишите свои эмоции:</h2>
+              <h2 class="feedback-form__title feedback-form__title--on-border heading-title">Опишите свои эмоции:</h2>
               <label class="feedback-form__field form-field form-field--textarea">
                 <textarea class="form-field__control textarea" name="review-text" id="review-text" placeholder="Опишите подробно все свои восторги "></textarea>
               </label>
             </div>
-            <div class="feedback-form__group feedback-form__group--submit">
+            <div class="feedback-form__submit">
               <button class="feedback-form__button button" type="submit">Отправить отзыв</button>
               <small class="feedback-form__legend">* — обязательные поля</small>
             </div>

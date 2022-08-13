@@ -1,4 +1,4 @@
-@use "./../variables/color-variables.scss";
+@use "./../variables";
 
 .heading-title {
   margin: 0;
@@ -7,16 +7,12 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  color: color-variables.$basic-text;
+  color: variables.$basic-text;
   text-align: center;
   text-transform: uppercase;
 
-  @include tablet {
-    font-size: 21px;
-  }
-
   &--light {
-    color: color-variables.$add-color-light;
+    color: variables.$add-color-light;
   }
 
   &--extra {

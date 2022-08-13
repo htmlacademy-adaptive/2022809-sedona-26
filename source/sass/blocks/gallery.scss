@@ -1,17 +1,46 @@
+@use "./../mixins";
+
 .gallery {
   padding-top: 30px;
+
+  @include mixins.tablet {
+    padding: 62px 60px 0;
+  }
+
+  @include mixins.desktop {
+    padding: 89px 0 0 0;
+  }
 }
 
 .gallery__heading-wrapper {
   margin: 0 auto;
-  padding: 0 20px 44px;
+  padding: 0 20px 46px;
+
+  @include mixins.tablet {
+    padding: 0 63px 86px;
+  }
+
+  @include mixins.desktop {
+    padding: 0 371px 89px;
+  }
 }
 
 .gallery__title {
   margin-bottom: 25px;
+
+  @include mixins.tablet {
+    font-size: 30px;
+  }
 }
 
 .gallery__wrapper {
-  display: grid;
-  justify-content: center;
+  @include mixins.tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include mixins.desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

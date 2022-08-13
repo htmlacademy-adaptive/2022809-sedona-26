@@ -1,25 +1,51 @@
+@use "./../mixins";
+
 .promo {
   position: relative;
   padding: 17px 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+  @include mixins.tablet {
+    padding: 58px 60px 40px;
+  }
+
+  @include mixins.desktop {
+    padding: 62px 200px 66px;
+  }
 }
 
 .promo__heading-wrapper {
-  padding: 0 20px;
+  padding: 0 20px 38px;
+
+  @include mixins.tablet {
+    padding: 0 101.5px 65px;
+  }
+
+  @include mixins.desktop {
+    padding: 0 177.5px 64px;
+  }
 }
 
 .promo__title {
   margin-bottom: 27px;
+
+  @include mixins.tablet {
+    margin-bottom: 24px;
+    font-size: 30px;
+  }
 }
 
-.promo__subtitle {
-  margin-bottom: 38px;
+.promo__video-wrapper {
+  position: relative;
+}
+
+.promo__video {
+  width: 100%;
+  height: 500px;
 }
 
 .promo__button {
   position: absolute;
-  bottom: 60px;
-  left: 144px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

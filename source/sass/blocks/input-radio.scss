@@ -1,5 +1,5 @@
-@use "./../mixins/mixins.scss";
-@use "./../variables/color-variables.scss";
+@use "./../mixins";
+@use "./../variables";
 
 .input-radio:checked + .input-radio__label::after {
   @include mixins.before-after(absolute, 16px, 16px);
@@ -7,7 +7,7 @@
   left: 16px;
   transform: translate(0, -50%);
 
-  background-color: color-variables.$basic-text;
+  background-color: variables.$basic-text;
   border-radius: 50%;
 }
 
@@ -15,6 +15,6 @@
   @include mixins.before-after(absolute, 46px, 46px);
   top: 0;
   left: 0;
-  background-color: color-variables.$inert-light;
+  background-color: variables.$inert-light;
   border-radius: 50%;
 }

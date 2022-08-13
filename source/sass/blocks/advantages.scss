@@ -1,13 +1,13 @@
-@use "./../mixins/mixins.scss";
+@use "./../mixins";
 
 .advantages {
   padding-top: 32px;
 
-  @include tablet {
+  @include mixins.tablet {
     padding-top: 47.5px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding-top: 59px;
   }
 }
@@ -16,11 +16,11 @@
   margin: 0 auto;
   padding: 0 25px 16px;
 
-  @include tablet {
+  @include mixins.tablet {
     padding: 0 90px 56.5px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding: 0 290px 45px;
   }
 }
@@ -28,8 +28,9 @@
 .advantages__title {
   margin-bottom: 35px;
 
-  @include tablet {
+  @include mixins.tablet {
     margin-bottom: 28px;
+    font-size: 21px;
   }
 }
 
@@ -39,7 +40,7 @@
   list-style-type: none;
   counter-reset: number;
 
-  @include tablet {
+  @include mixins.tablet {
     display: flex;
     flex-wrap: wrap;
   }
@@ -52,7 +53,7 @@
   padding: 0;
   list-style-type: none;
 
-  @include tablet {
+  @include mixins.tablet {
     flex-basis: 100%;
   }
 }
@@ -62,7 +63,7 @@
   padding: 0;
   list-style-type: none;
 
-  @include tablet {
+  @include mixins.tablet {
     display: flex;
 
     &--reverse {
@@ -72,9 +73,10 @@
 }
 
 .advantages__image {
+  display: block;
   margin: 0 auto;
 
-  @include tablet {
+  @include mixins.tablet {
     flex-grow: 1;
     object-fit: cover;
   }
@@ -87,7 +89,7 @@
   padding: 23px 18px 30px;
   list-style-type: none;
 
-  @include tablet {
+  @include mixins.tablet {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0;
@@ -98,7 +100,7 @@
   position: relative;
   padding-bottom: 22px;
 
-  @include tablet {
+  @include mixins.tablet {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,7 +114,7 @@
     background-repeat: no-repeat;
     background-position: 0 0;
 
-    @include tablet {
+    @include mixins.tablet {
       background-image: url("../img/icons/house.svg");
       background-position: 50% 60px;
     }
@@ -123,7 +125,7 @@
     background-repeat: no-repeat;
     background-position: 0 0;
 
-    @include tablet {
+    @include mixins.tablet {
       background-image: url("../img/icons/food.svg");
       background-position: 50% 63px;
     }
@@ -134,7 +136,7 @@
     background-repeat: no-repeat;
     background-position: 0 0;
 
-    @include tablet {
+    @include mixins.tablet {
       background-image: url("../img/icons/gift.svg");
       background-position: 50% 57px;
     }
@@ -145,7 +147,7 @@
   margin: 8px 0 16px 47px;
   text-align: left;
 
-  @include tablet {
+  @include mixins.tablet {
     margin: 0;
     margin-bottom: 23px;
     text-align: center;
@@ -156,7 +158,7 @@
   margin-left: 47px;
   text-align: left;
 
-  @include tablet {
+  @include mixins.tablet {
     margin: 0;
     text-align: center;
   }

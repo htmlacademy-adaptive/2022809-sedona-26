@@ -1,8 +1,14 @@
-@use "./../mixins/mixins.scss";
-@use "./../variables/color-variables.scss";
+@use "./../mixins";
+@use "./../variables";
 
 .advantages-item {
   position: relative;
+
+  @include mixins.tablet {
+    flex-basis: 33.33%;
+    min-height: 256px;
+    padding: 42px 20px 20px;
+  }
 
   &--number {
     display: flex;
@@ -26,50 +32,52 @@
 
   &--dark {
     padding: 39px 16px 35px;
-    color: color-variables.$add-color-light;
-    background-color: color-variables.$basic-color;
+    color: variables.$add-color-light;
+    background-color: variables.$basic-color;
 
-    @include tablet {
-      padding: 42px 32px;
+    @include mixins.tablet {
+      padding: 42px 20px 20px;
+    }
+
+    @include mixins.desktop {
+      padding: 51px 20px 20px;
     }
   }
 
   &--medium {
     padding: 25px 35px;
-    color: color-variables.$basic-text-medium;
-    background-color: color-variables.$add-color;
+    color: variables.$basic-text-medium;
+    background-color: variables.$add-color;
 
-    @include tablet {
-      padding: 42px 32px;
+    @include mixins.tablet {
+      padding: 42px 20px 20px;
     }
   }
 
   &--primary {
     padding: 70px 16px 40px;
 
-    @include tablet {
-      padding: 42px 32px;
+    @include mixins.tablet {
+      padding: 42px 20px 20px;
     }
 
-    &::after {
-      @include mixins.before-after(absolute, 100%, 37px);
-      top: 0;
-      left: 50%;
-      transform: translate(-50%);
-      background-image: url("../img/index/advantages-divider.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      @include tablet {
-        display: none;
-      }
+    @include mixins.desktop {
+      padding: 47px 20px 20px;
     }
   }
 
-  @include tablet {
-    flex-basis: 33.33%;
-    justify-content: center;
-    min-height: 256px;
+  &--primary::after {
+    @include mixins.before-after(absolute, 100%, 37px);
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-image: url("../img/index/advantages-divider.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mixins.tablet {
+      display: none;
+    }
   }
 }
 

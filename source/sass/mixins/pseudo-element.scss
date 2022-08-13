@@ -1,0 +1,7 @@
+@mixin before-after($position, $width, $height) {
+  content: "";
+  position: $position;
+  display: block;
+  width: $width;
+  height: $height;
+}

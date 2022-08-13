@@ -1,24 +1,127 @@
-@use "./../mixins/mixins.scss";
+@use "./../mixins";
+@use "./../variables";
 
 .gallery-card {
+  display: flex;
+  flex-direction: column;
   padding: 24px 20px 25px;
+
+  @include mixins.tablet {
+    padding: 0;
+    min-height: 347px;
+    background-color: variables.$inert-light;
+
+    &--max {
+      grid-column: -1 / 1;
+      min-height: 480px;
+    }
+
+    &:nth-child(odd) {
+      background-color: variables.$inert-medium;
+    }
+
+    &:first-of-type {
+      background-color: variables.$inert-light;
+    }
+  }
+
+  @include mixins.desktop {
+    position: relative;
+    min-height: 267px;
+
+    &--max {
+      min-height: 400px;
+    }
+  }
 }
 
 .gallery-card__link {
   display: block;
   margin-bottom: 15px;
+
+  @include mixins.tablet {
+    margin: 0;
+    flex-basis: 76.95%;
+
+    &--max {
+      flex-basis: 83.33%;
+    }
+  }
+
+  @include mixins.desktop {
+    flex-basis: 100%;
+
+    &--max {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.gallery-card__picture {
+  display: block;
+}
+
+.gallery-card__image {
+  display: block;
+  width: 100%;
+
+  @include mixins.tablet {
+    height: 100%;
+    aspect-ratio: 1.21;
+
+    &--max {
+      aspect-ratio: 1.62;
+    }
+  }
+
+  @include mixins.desktop {
+    aspect-ratio: 1.5;
+
+    &--max {
+      aspect-ratio: 3;
+    }
+  }
 }
 
 .gallery-card__content {
-  display: grid;
+  @include mixins.tablet {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 22px 20px 15px;
+  }
+
+  @include mixins.desktop {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(variables.$basic-text, 0.3);
+  }
 }
 
 .gallery-card__title {
   margin-bottom: 1px;
+
+  @include mixins.tablet {
+    grid-column: 1 / 2;
+  }
+
+  @include mixins.desktop {
+    color: variables.$add-color-light;
+  }
 }
 
 .gallery-card__author {
   margin-bottom: 11px;
+
+  @include mixins.tablet {
+    grid-column: 1 / 2;
+    margin-bottom: 0;
+  }
+
+  @include mixins.desktop {
+    color: variables.$add-color-light;
+  }
 }
 
 .gallery-card__like {
@@ -26,9 +129,29 @@
   align-items: baseline;
   gap: 14px;
   margin: 0;
+
+  @include mixins.tablet {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    align-self: center;
+    margin-left: auto;
+    gap: 9px;
+  }
+
+  @include mixins.desktop {
+    color: variables.$add-color-light;
+  }
 }
 
 .gallery-card__button {
   width: 23px;
   height: 21px;
+}
+
+.gallery-card__icon {
+  fill: rgba(variables.$basic-text, 0.3);
+
+  @include mixins.desktop {
+    fill: rgba(variables.$add-color-light, 1);
+  }
 }

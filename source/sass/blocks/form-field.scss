@@ -1,5 +1,5 @@
-@use "./../mixins/mixins.scss";
-@use "./../variables/color-variables.scss";
+@use "./../mixins";
+@use "./../variables";
 
 .form-field {
   position: relative;
@@ -35,7 +35,7 @@
   }
 
   &--textarea {
-    height: 150px;
+    min-height: 150px;
   }
 }
 
@@ -44,16 +44,16 @@
 }
 
 .form-field__label {
-  margin-left: 62px;
+  padding-left: 62px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  color: color-variables.$basic-text;
+  color: variables.$basic-text;
 
   &--extra {
-    margin-left: 16px;
+    padding-left: 16px;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;

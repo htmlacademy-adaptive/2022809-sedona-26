@@ -1,4 +1,5 @@
-@use "./../variables/color-variables.scss";
+@use "./../mixins";
+@use "./../variables";
 
 .navigation {
   font-family: "PT Sans", sans-serif;
@@ -11,13 +12,13 @@
   padding: 0;
   list-style-type: none;
 
-  @include tablet {
+  @include mixins.tablet {
     display: flex;
   }
 }
 
 .navigation__item {
-  background-color: color-variables.$basic-color;
+  background-color: variables.$basic-color;
   box-shadow: 0 -1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 
   &:first-child {
@@ -28,8 +29,8 @@
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 87%, rgba(0, 0, 0, 0.2) 100%);
   }
 
-  @include tablet {
-    background-color: color-variables.$add-color-light;
+  @include mixins.tablet {
+    background-color: variables.$add-color-light;
     box-shadow: none;
 
     &:first-child {
@@ -51,12 +52,12 @@
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  color: color-variables.$add-color-light;
+  color: variables.$add-color-light;
   text-decoration: none;
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 14px;
     line-height: 21px;
-    color: color-variables.$basic-text;
+    color: variables.$basic-text;
   }
 }
