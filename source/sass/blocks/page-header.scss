@@ -9,9 +9,12 @@
 
 .page-header__toggle {
   position: absolute;
-  z-index: 2;
   top: 17px;
   right: 20px;
+  padding: 0;
+  z-index: 2;
+  border: none;
+  cursor: pointer;
 
   @include mixins.tablet {
     display: none;
@@ -23,4 +26,8 @@
   left: 50%;
   transform: translate(-50%);
   z-index: 1;
+
+  @include mixins.tablet {
+    z-index: 2;
+  }
 }

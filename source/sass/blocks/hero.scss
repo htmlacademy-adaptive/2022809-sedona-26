@@ -1,55 +1,41 @@
 @use "./../mixins";
 
 .hero {
-  position: relative;
   padding: 90px 19px 85px;
-  background-image: url("../img/index/banner-mob.jpg"), linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-image:
+    url("../img/index/hero-divider-desk.svg"),
+    url("../img/index/banner-desk.jpg"),
+    linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center calc(100% + 0.5px), center -40px;
+  background-size: auto, auto;
 
   @include mixins.tablet {
     padding: 77px 60px 91px;
-    background-image: url("../img/index/banner-tab.jpg"), linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background-position: center calc(100% + 0.5px), center center;
+    background-size: auto auto, cover;
   }
 
   @include mixins.desktop {
     padding: 78px 120px 90px;
-    background-image: url("../img/index/banner-desk.jpg"), linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
   }
 
   &--size-small {
     padding: 52px 19px 67px;
-    background-image: url("../img/catalog/banner-small-mob.jpg"), linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background-image:
+      url("../img/index/hero-divider-desk.svg"),
+      url("../img/catalog/banner-small-desk.jpg"),
+      linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
+      background-position: center calc(100% + 0.5px), -390px -170px;
 
     @include mixins.tablet {
       padding: 95px 60px 117px;
-      background-image: url("../img/catalog/banner-small-tab.jpg"), linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
+      background-position: center calc(100% + 0.5px), center bottom;
+      background-size: auto auto, auto;
     }
 
     @include mixins.desktop {
       padding: 101px 120px 120px;
-      background-image: url("../img/catalog/banner-small-desk.jpg"), linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    }
-  }
-
-  &::after {
-    @include mixins.before-after(absolute, 100%, 57px);
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    background-image: url("../img/index/hero-divider.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% auto;
-
-    @include mixins.tablet {
-      background-image: url("../img/index/hero-divider-tab.svg");
-    }
-
-    @include mixins.desktop {
-      bottom: -1px;
-      background-image: url("../img/index/hero-divider-desk.svg");
     }
   }
 }

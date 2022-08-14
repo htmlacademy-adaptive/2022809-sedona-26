@@ -1,44 +1,63 @@
 @use "./../mixins";
 @use "./../variables";
 
+$item-width: 20%;
+$item-margin: $item-width;
+
 .navigation {
   font-family: "PT Sans", sans-serif;
   position: relative;
   z-index: 1;
+  min-height: 100%;
 }
 
 .navigation__list {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  background-color: variables.$basic-color;
+
+  &::after {
+    @include mixins.before-after(absolute, 100%, 7px);
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  }
 
   @include mixins.tablet {
     display: flex;
+    flex-wrap: wrap;
+    background-color: variables.$add-color-light;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
 .navigation__item {
-  background-color: variables.$basic-color;
-  box-shadow: 0 -1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-
-  &:first-child {
-    box-shadow: 0 -1px 0 rgba(1, 1, 1, 0.2);
+  &:not(:first-of-type) {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  &:last-child {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 87%, rgba(0, 0, 0, 0.2) 100%);
+  &:not(:last-of-type) {
+    border-bottom: 1px solid rgba(1, 1, 1, 0.2);
   }
 
   @include mixins.tablet {
-    background-color: variables.$add-color-light;
-    box-shadow: none;
+    flex-basis: $item-width;
 
-    &:first-child {
-      box-shadow: none;
+    &:not(:first-of-type) {
+      border-top: none;
     }
 
-    &:last-child {
-      background-image: none;
+    &:not(:last-of-type) {
+      border-bottom: none;
+    }
+
+    &:nth-child(4n-2) {
+      margin-right: $item-margin;
     }
   }
 }
@@ -46,7 +65,6 @@
 .navigation__link {
   display: block;
   padding: 17px 18px 12px;
-
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -56,6 +74,7 @@
   text-decoration: none;
 
   @include mixins.tablet {
+    padding: 17px 10px;
     font-size: 14px;
     line-height: 21px;
     color: variables.$basic-text;
