@@ -40,7 +40,10 @@
 
 .promo__video {
   width: 100%;
-  height: 500px;
+
+  @include mixins.tablet {
+    height: 500px;
+  }
 }
 
 .promo__button {
