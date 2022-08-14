@@ -196,7 +196,7 @@
     padding: 0;
   }
 
-  @include mixins.tablet {
+  @include mixins.desktop {
     padding: 0 96px;
   }
 }

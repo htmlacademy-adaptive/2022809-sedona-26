@@ -174,17 +174,19 @@
       </footer>
     </div>
     <div class="modal-error modal-error--active">
-      <div class="modal">
-        <h2 class="modal__heading">Что-то пошло не так!</h2>
-        <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="modal__button button" type="submit">ОК</button>
+      <div class="modal-error__content">
+        <h2 class="modal-error__title heading-title"><span class="modal-error__title-wrap">Что-то пошло не так!</span></h2>
+        <p class="modal-error__subtitle heading-subtitle">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="modal-error__button button" type="submit">ОК</button>
       </div>
     </div>
     <div class="modal-success modal-success--active">
-      <div class="modal">
-        <h2 class="modal__heading">Ваш отзыв отправлен!</h2>
-        <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-        <button class="modal__button button" type="submit">Закрыть окно</button>
+      <div class="modal-success__content">
+        <h2 class="modal-success__title heading-title">Ваш отзыв отправлен!</h2>
+        <p class="modal-success__subtitle heading-subtitle">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <div class="modal-success__button-wrapper">
+          <button class="modal-success__button button" type="submit">Закрыть окно</button>
+        </div>
       </div>
     </div>
   </body>

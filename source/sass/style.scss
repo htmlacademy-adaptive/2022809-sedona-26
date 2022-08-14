@@ -37,3 +37,7 @@
 @use "./blocks/input-radio.scss";
 @use "./blocks/input-checkbox.scss";
 @use "./blocks/textarea.scss";
+
+// Modals
+@use "./blocks/modal-error.scss";
+@use "./blocks/modal-success.scss";
