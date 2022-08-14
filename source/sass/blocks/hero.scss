@@ -26,7 +26,7 @@
       url("../img/index/hero-divider-desk.svg"),
       url("../img/catalog/banner-small-desk.jpg"),
       linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
-      background-position: center calc(100% + 0.5px), -390px -170px;
+    background-position: center calc(100% + 0.5px), -390px -170px;
 
     @include mixins.tablet {
       padding: 95px 60px 117px;
