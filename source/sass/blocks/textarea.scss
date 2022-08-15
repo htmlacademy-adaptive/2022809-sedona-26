@@ -10,10 +10,20 @@
   font-weight: 700;
 
   background-color: variables.$inert-light;
-  border: none;
+  border: 4px solid transparent;
   resize: none;
 
   &::placeholder {
     color: rgba(variables.$basic-text, 0.3);
+  }
+
+  &:hover {
+    background-color: variables.$inert-color;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: variables.$inert-color;
+    background-color: variables.$add-color-light;
   }
 }

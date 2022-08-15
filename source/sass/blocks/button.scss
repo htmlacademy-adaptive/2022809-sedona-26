@@ -15,4 +15,28 @@
   background-color: variables.$basic-color;
   border: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: variables.$basic-medium;
+  }
+
+  &:active {
+    color: rgba(variables.$add-color-light, 0.3);
+    background-color: variables.$basic-dark;
+  }
+
+  &--disabled {
+    background-color: variables.$inert-color;
+    cursor: default;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      color: variables.$add-color-light;
+      background-color: variables.$inert-color;
+    }
+  }
 }

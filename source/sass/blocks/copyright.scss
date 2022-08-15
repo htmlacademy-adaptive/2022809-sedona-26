@@ -11,6 +11,21 @@
   color: variables.$basic-text;
   text-transform: uppercase;
   text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:hover .copyright__icon,
+  &:focus .copyright__icon {
+    outline: none;
+    color: variables.$basic-color;
+    fill: variables.$basic-color;
+  }
+
+  &:active,
+  &:active .copyright__icon {
+    color: variables.$add-text-light;
+    fill: variables.$add-text-light;
+  }
 }
 
 .copyright__text {

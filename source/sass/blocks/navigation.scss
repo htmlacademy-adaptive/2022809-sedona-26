@@ -9,6 +9,57 @@ $item-margin: $item-width;
   position: relative;
   z-index: 1;
   min-height: 100%;
+
+  @include mixins.mobile-width-only {
+    &--opened {
+      position: absolute;
+      top: 0;
+      height: 0;
+      min-width: 100%;
+    }
+
+    &--closed {
+      display: none;
+    }
+
+    &--nojs {
+      position: static;
+      z-index: 1;
+    }
+  }
+}
+
+.navigation__toggle {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 24px;
+  height: 25px;
+  padding: 0;
+  z-index: 2;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    @include mixins.before-after(absolute, 27px, 4px);
+    top: 9px;
+    right: -2px;
+    background-color: variables.$add-color-light;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  @include mixins.tablet {
+    display: none;
+  }
 }
 
 .navigation__list {
@@ -37,12 +88,10 @@ $item-margin: $item-width;
 }
 
 .navigation__item {
-  &:not(:first-of-type) {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-  }
+  box-shadow: 0 -1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 
-  &:not(:last-of-type) {
-    border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+  &:first-of-type {
+    box-shadow: 0 -1px 0 rgba(1, 1, 1, 0.2);
   }
 
   @include mixins.tablet {
@@ -62,9 +111,10 @@ $item-margin: $item-width;
   }
 }
 
+
 .navigation__link {
   display: block;
-  padding: 17px 18px 12px;
+  padding: 17px 18px 13px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -73,10 +123,36 @@ $item-margin: $item-width;
   color: variables.$add-color-light;
   text-decoration: none;
 
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: variables.$basic-medium;
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: variables.$basic-dark;
+  }
+
   @include mixins.tablet {
     padding: 17px 10px;
     font-size: 14px;
     line-height: 21px;
     color: variables.$basic-text;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: variables.$basic-color;
+      background-color: variables.$add-color-light;
+    }
+
+    &:active {
+      color: variables.$basic-text;
+    }
+
+    &--current {
+      color: variables.$add-text-medium;
+    }
   }
 }

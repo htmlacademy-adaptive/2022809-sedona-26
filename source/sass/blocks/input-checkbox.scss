@@ -1,16 +1,38 @@
 @use "./../mixins";
 @use "./../variables";
 
-.input-checkbox:checked + .input-checkbox__label::before {
-  background-image: url("../img/icons/tick.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .input-checkbox__label::before {
   @include mixins.before-after(absolute, 46px, 46px);
   top: 0;
   left: 0;
   background-color: variables.$inert-light;
   border-radius: 4px;
+}
+
+.input-checkbox:checked + .input-checkbox__label::after {
+  @include mixins.before-after(absolute, 46px, 46px);
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  background-image: url("../img/icons/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-field:hover .input-checkbox__label::before {
+  background-color: variables.$inert-color;
+  cursor: pointer;
+}
+
+.form-field:focus-within .input-checkbox__label::before {
+  outline: none;
+  background-color: variables.$inert-color;
+}
+
+.form-field:active .input-checkbox__label::before {
+  background-color: variables.$inert-dark;
+}
+
+.form-field:active .input-checkbox__label::after {
+  opacity: 0.3;
 }

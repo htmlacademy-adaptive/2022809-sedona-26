@@ -11,14 +11,32 @@
   position: absolute;
   top: 17px;
   right: 20px;
+  width: 25px;
+  height: 25px;
   padding: 0;
-  z-index: 2;
+  background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &::before {
+    @include mixins.before-after(absolute, 23px, 4px);
+    top: 0;
+    right: 0;
+    background-color: variables.$basic-color;
+    box-shadow: 0 9px 0 0 variables.$basic-color, 0 18px 0 0 variables.$basic-color;
+  }
 
   @include mixins.tablet {
     display: none;
   }
+}
+
+.page-header__toggle:hover .page-header__toggle::before {
+  background-color: rgba(variables.$basic-color, 0.6);
+}
+
+.page-header__toggle:focus .page-header__toggle::before {
+  outline: none;
 }
 
 .page-header__logo {
@@ -30,4 +48,9 @@
   @include mixins.tablet {
     z-index: 2;
   }
+
+  &:focus {
+    outline: 2px solid variables.$basic-color;
+  }
+
 }
