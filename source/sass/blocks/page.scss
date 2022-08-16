@@ -1,20 +1,30 @@
-@use "./../variables/color-variables.scss";
+@use "./../mixins";
+@use "./../variables";
+
 
 .page {
   height: 100%;
 }
 
 .page__body {
-  max-width: 320px;
-  height: 100%;
+  min-height: 100%;
   margin: 0;
-  background-color: color-variables.$inert-light;
+  background-color: variables.$inert-light;
 }
 
 .page__container {
   display: flex;
   flex-direction: column;
+  max-width: 320px;
   min-height: 100%;
   margin: 0 auto;
-  background-color: color-variables.$add-color-light;
+  background-color: variables.$add-color-light;
+
+  @include mixins.tablet {
+    max-width: 768px;
+  }
+
+  @include mixins.desktop {
+    max-width: 1200px;
+  }
 }

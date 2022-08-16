@@ -1,8 +1,7 @@
 // Global
 @use "./global/fonts.scss";
 @use "./global/box-model.scss";
-@use "./variables/color-variables.scss";
-@use "./mixins/mixins.scss";
+@use "./global/br-wrap.scss";
 
 // Blocks Index
 @use "./blocks/page.scss";
@@ -10,7 +9,6 @@
 @use "./blocks/heading-subtitle.scss";
 @use "./blocks/page-header.scss";
 @use "./blocks/navigation.scss";
-@use "./blocks/toggle.scss";
 @use "./blocks/main-container.scss";
 @use "./blocks/hero.scss";
 @use "./blocks/advantages.scss";
@@ -39,3 +37,7 @@
 @use "./blocks/input-radio.scss";
 @use "./blocks/input-checkbox.scss";
 @use "./blocks/textarea.scss";
+
+// Modals
+@use "./blocks/modal-error.scss";
+@use "./blocks/modal-success.scss";

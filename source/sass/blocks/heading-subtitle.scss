@@ -1,25 +1,21 @@
-@use "./../variables/color-variables.scss";
+@use "./../variables";
 
 .heading-subtitle {
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 1.5;
   font-weight: 400;
-  color: color-variables.$basic-text-medium;
+  color: variables.$basic-text-medium;
   text-align: center;
   text-transform: uppercase;
 
   &--light {
-    color: color-variables.$add-color-light;
+    color: variables.$add-color-light;
   }
 
   &--extra {
     font-weight: 700;
-    text-align: left;
-  }
-
-  &--lr {
     text-align: left;
   }
 }

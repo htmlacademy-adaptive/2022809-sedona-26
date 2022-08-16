@@ -1,25 +1,46 @@
-@use "./../variables/color-variables.scss";
+@use "./../mixins";
+@use "./../variables";
 
 .page-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 28.5px 18px 23px;
+
+  @include mixins.tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 36px 60px;
+  }
+
+  @include mixins.desktop {
+    padding: 36px 120px;
+  }
 }
 
 .page-footer__hashtag {
   margin: 0;
-  margin-bottom: 33.5px;
+  margin-bottom: 32.5px;
+  padding: 0 58px 0 56px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  color: color-variables.$basic-text;
+  color: variables.$basic-text;
   text-transform: uppercase;
+
+  @include mixins.tablet {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .page-footer__social {
   margin: 0;
   margin-bottom: 40px;
+
+  @include mixins.tablet {
+    margin: 0;
+  }
 }

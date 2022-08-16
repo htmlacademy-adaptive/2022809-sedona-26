@@ -1,55 +1,212 @@
+@use "./../mixins";
+@use "./../variables";
+
 .feedback-form {
-  display: grid;
-  padding: 0 20px;
+  @include mixins.tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 60px 64px;
+  }
+
+  @include mixins.desktop {
+    padding: 0 120px 64px;
+  }
 }
 
 .feedback-form__group {
-  display: grid;
-  gap: 16px;
-  padding-top: 24px;
+  position: relative;
+  border-top: 1px solid variables.$inert-color;
 
   &--name {
-    margin-bottom: 39px;
+    padding: 24px 20px 39px;
+
+    @include mixins.tablet {
+      padding: 0;
+      margin-bottom: 61px;
+      border-top: none;
+    }
+
+    @include mixins.desktop {
+      margin-bottom: 69px;
+    }
   }
 
   &--contacts {
-    margin-bottom: 34px;
+    padding: 24px 20px 34px;
+
+    @include mixins.tablet {
+      padding: 0;
+      margin-bottom: 61px;
+      border-top: none;
+      border-left: 1px solid #d8d8d8;
+    }
+
+    @include mixins.desktop {
+      margin-bottom: 69px;
+    }
   }
 
   &--impression {
-    margin-bottom: 24px;
+    padding: 24px 20px;
+
+    @include mixins.tablet {
+      grid-column: -1 / 1;
+      padding: 0 0 74.5px;
+    }
+
+    @include mixins.desktop {
+      padding: 0 0 82.5px;
+    }
   }
 
   &--places {
-    margin-bottom: 24px;
+    padding: 24px 20px;
+
+    @include mixins.tablet {
+      grid-column: -1 / 1;
+      padding: 0 0 55px;
+    }
+
+    @include mixins.desktop {
+      padding: 0 0 69px;
+    }
   }
 
   &--review {
-    margin-bottom: 56px;
-  }
+    padding: 24px 20px 56px;
 
-  &--submit {
-    gap: 3px;
-    margin-bottom: 24px;
-    padding: 0;
+    @include mixins.tablet {
+      grid-column: -1 / 1;
+      padding: 41px 0 48px;
+    }
+
+    @include mixins.desktop {
+      grid-column: -1 / 1;
+      padding: 41px 96px 48px;
+    }
   }
 }
 
 .feedback-form__title {
-  margin-bottom: 4px;
+  margin-bottom: 20px;
+
+  @include mixins.tablet {
+    margin-bottom: 28px;
+    font-size: 21px;
+
+    &--on-border {
+      position: absolute;
+      min-width: 402px;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: variables.$add-color-light;
+    }
+  }
+
+  &--extra {
+    @include mixins.tablet {
+      margin-left: 6px;
+    }
+
+    @include mixins.desktop {
+      margin-left: 0;
+    }
+  }
+}
+
+.feedback-form__title-wrap {
+  display: inline-block;
+  max-width: 402px;
+}
+
+.feedback-form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include mixins.tablet {
+    padding-right: 44px;
+    padding-bottom: 15px;
+  }
+
+  @include mixins.desktop {
+    min-width: 494px;
+    padding-right: 64px;
+  }
+
+  &--extra {
+    @include mixins.tablet {
+      padding-right: 0;
+      padding-left: 43px;
+    }
+
+    @include mixins.desktop {
+      min-width: 402px;
+      padding-left: 63px;
+    }
+  }
 }
 
 .feedback-form__list {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 16px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @include mixins.tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 41px 36px 0;
+  }
+
+  @include mixins.desktop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    padding: 58px 53px 17px;
+  }
+
+  &--extra {
+    @include mixins.tablet {
+      gap: 32px;
+      padding: 54.5px 84px 0;
+    }
+
+    @include mixins.desktop {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 64px;
+      padding: 85.5px 44.5px 31px;
+    }
+  }
+}
+
+.feedback-form__submit {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 24px;
+
+  @include mixins.tablet {
+    grid-column: -1 / 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0;
+  }
+
+  @include mixins.desktop {
+    padding: 0 96px;
+  }
 }
 
 .feedback-form__button {
-  margin: 0 auto;
   min-width: 280px;
+
+  @include mixins.tablet {
+    min-width: 324px;
+  }
 }
 
 .feedback-form__legend {
@@ -59,4 +216,8 @@
   font-weight: 400;
   text-align: right;
   text-transform: uppercase;
+
+  @include mixins.tablet {
+    font-size: 14px;
+  }
 }

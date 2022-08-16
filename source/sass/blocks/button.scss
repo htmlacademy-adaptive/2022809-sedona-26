@@ -1,4 +1,4 @@
-@use "./../variables/color-variables.scss";
+@use "./../variables";
 
 .button {
   padding: 16px 40px;
@@ -7,12 +7,36 @@
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  color: color-variables.$add-color-light;
+  color: variables.$add-color-light;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 
-  background-color: color-variables.$basic-color;
+  background-color: variables.$basic-color;
   border: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: variables.$basic-medium;
+  }
+
+  &:active {
+    color: rgba(variables.$add-color-light, 0.3);
+    background-color: variables.$basic-dark;
+  }
+
+  &--disabled {
+    background-color: variables.$inert-color;
+    cursor: default;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      color: variables.$add-color-light;
+      background-color: variables.$inert-color;
+    }
+  }
 }

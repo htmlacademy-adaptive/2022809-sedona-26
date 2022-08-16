@@ -1,5 +1,37 @@
+@use "./../mixins";
+@use "./../variables";
+
 .map {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 10px;
+  position: relative;
+  margin-bottom: 10px;
+
+  @include mixins.tablet {
+    margin-bottom: 0;
+  }
+}
+
+.map__frame {
+  display: block;
+  min-width: 100%;
+  border: none;
+}
+
+.map__marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 27px;
+  height: 27px;
+  background-color: variables.$add-color-light;
+  border-radius: 50%;
+
+  &::before {
+    @include mixins.before-after(absolute, 16.8px, 16.8px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #81b3d3;
+    border-radius: 50%;
+  }
 }

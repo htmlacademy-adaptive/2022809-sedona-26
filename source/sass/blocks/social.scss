@@ -1,4 +1,4 @@
-@use "./../variables/color-variables.scss";
+@use "./../variables";
 
 .social {
   display: grid;
@@ -14,9 +14,23 @@
   align-items: center;
   width: 48px;
   height: 48px;
-  background-color: color-variables.$basic-color;
+  background-color: variables.$basic-color;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: variables.$basic-medium;
+  }
+
+  &:active {
+    background-color: variables.$basic-dark;
+  }
 }
 
 .social__icon {
-  fill: color-variables.$add-color-light;
+  fill: variables.$add-color-light;
+}
+
+.social__link:active .social__icon {
+  fill: rgba(variables.$add-color-light, 0.3);
 }

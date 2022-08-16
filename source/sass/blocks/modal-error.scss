@@ -1,0 +1,74 @@
+@use "./../variables";
+@use "./../mixins";
+
+.modal-error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(variables.$basic-text, 0.3);
+  display: none;
+
+  &--active {
+    display: none;
+    // display: flex;
+  }
+}
+
+.modal-error__content {
+  max-width: 320px;
+  margin: auto;
+  padding: 45px 41.5px 35px;
+  background-color: variables.$add-color-light;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+  @include mixins.tablet {
+    max-width: 400px;
+    padding: 50px 46.5px 49px;
+  }
+
+  @include mixins.tablet {
+    padding: 48px 46.5px 49px;
+  }
+}
+
+.modal-error__title {
+  margin-bottom: 25px;
+
+  @include mixins.tablet {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 21px;
+  }
+}
+
+.modal-error__title-wrap {
+  @include mixins.tablet {
+    display: inline-block;
+    max-width: 215px;
+  }
+}
+
+.modal-error__subtitle {
+  margin-bottom: 28px;
+
+  @include mixins.tablet {
+    margin-bottom: 59px;
+  }
+
+  @include mixins.desktop {
+    margin-bottom: 45px;
+  }
+}
+
+.modal-error__button {
+  display: block;
+  min-width: 180px;
+  margin: 0 auto;
+
+  @include mixins.tablet {
+    min-width: 272px;
+  }
+}

@@ -1,4 +1,4 @@
-@use "./../variables/color-variables.scss";
+@use "./../variables";
 
 .input {
   height: 58px;
@@ -7,13 +7,24 @@
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 26px;
-  color: color-variables.$basic-text;
+  color: variables.$basic-text;
   font-weight: 700;
 
-  background-color: color-variables.$inert-light;
-  border: none;
+  background-color: variables.$inert-light;
+  border: 4px solid transparent;
 
   &::placeholder {
-    color: rgba(color-variables.$basic-text, 0.3);
+    color: rgba(variables.$basic-text, 0.3);
+  }
+
+  &:hover {
+    outline: none;
+    background-color: variables.$inert-color;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: variables.$inert-color;
+    background-color: variables.$add-color-light;
   }
 }

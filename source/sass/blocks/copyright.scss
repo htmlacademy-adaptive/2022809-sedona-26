@@ -1,4 +1,4 @@
-@use "./../variables/color-variables.scss";
+@use "./../variables";
 
 .copyright {
   display: flex;
@@ -8,9 +8,24 @@
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: color-variables.$basic-text;
+  color: variables.$basic-text;
   text-transform: uppercase;
   text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:hover .copyright__icon,
+  &:focus .copyright__icon {
+    outline: none;
+    color: variables.$basic-color;
+    fill: variables.$basic-color;
+  }
+
+  &:active,
+  &:active .copyright__icon {
+    color: variables.$add-text-light;
+    fill: variables.$add-text-light;
+  }
 }
 
 .copyright__text {

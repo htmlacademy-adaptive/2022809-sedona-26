@@ -1,16 +1,47 @@
-@use "./../variables/color-variables.scss";
+@use "./../mixins";
+@use "./../variables";
 
 .page-header {
   position: relative;
   min-height: 56px;
-  background-color: color-variables.$add-color-light;
+  background-color: variables.$add-color-light;
 }
 
 .page-header__toggle {
   position: absolute;
-  z-index: 2;
   top: 17px;
   right: 20px;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    @include mixins.before-after(absolute, 23px, 4px);
+    top: 0;
+    right: 0;
+    background-color: variables.$basic-color;
+    box-shadow: 0 9px 0 0 variables.$basic-color, 0 18px 0 0 variables.$basic-color;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @include mixins.tablet {
+    display: none;
+  }
 }
 
 .page-header__logo {
@@ -18,4 +49,12 @@
   left: 50%;
   transform: translate(-50%);
   z-index: 1;
+
+  @include mixins.tablet {
+    z-index: 2;
+  }
+
+  &:focus {
+    outline: 2px solid variables.$basic-color;
+  }
 }

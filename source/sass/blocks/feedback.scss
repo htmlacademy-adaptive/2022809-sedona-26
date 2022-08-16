@@ -1,11 +1,36 @@
-.feedback {
-  padding-top: 36px;
-}
+@use "./../mixins";
 
 .feedback__heading-wrapper {
-  padding-bottom: 28px;
+  padding: 36px 20px 28px;
+
+  @include mixins.tablet {
+    padding: 62px 167px 102px;
+  }
+
+  @include mixins.desktop {
+    padding: 115px 383px 67px;
+  }
 }
 
 .feedback__title {
   margin-bottom: 24px;
+
+  @include mixins.tablet {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  @include mixins.desktop {
+    margin-bottom: 24px;
+  }
+}
+
+.feedback__subtitle {
+  @include mixins.tablet {
+    line-height: 24px;
+  }
+
+  @include mixins.desktop {
+    line-height: 21px;
+  }
 }
