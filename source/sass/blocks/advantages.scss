@@ -29,8 +29,9 @@
   margin-bottom: 35px;
 
   @include mixins.tablet {
-    margin-bottom: 28px;
+    margin-bottom: 27px;
     font-size: 21px;
+    line-height: 1.3;
   }
 }
 
@@ -78,7 +79,14 @@
 
   @include mixins.tablet {
     flex-grow: 1;
+    flex-basis: 66.66%;
+    height: auto;
     object-fit: cover;
+    aspect-ratio: 2;
+  }
+
+  @include mixins.desktop {
+    aspect-ratio: 3.13;
   }
 }
 
@@ -98,68 +106,100 @@
 
 .advantages__sublist-item {
   position: relative;
-  padding-bottom: 22px;
 
   @include mixins.tablet {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     flex-basis: 33.33%;
     min-height: 330px;
-    padding: 158px 36px 59px;
   }
 
   &--house {
+    padding: 0 0 21px 46px;
     background-image: url("../img/icons/house-small.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 
     @include mixins.tablet {
+      padding: 155px 36px 59px;
       background-image: url("../img/icons/house.svg");
       background-position: 50% 60px;
+    }
+
+    @include mixins.desktop {
+      padding: 138px 50px 59px;
     }
   }
 
   &--food {
+    padding: 0 0 21px 51px;
     background-image: url("../img/icons/food-small.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 
     @include mixins.tablet {
+      padding: 155px 35px 59px 36px;
       background-image: url("../img/icons/food.svg");
       background-position: 50% 63px;
+    }
+
+    @include mixins.desktop {
+      padding: 134px 50px 59px;
     }
   }
 
   &--gift {
+    padding: 0 0 21px 43px;
     background-image: url("../img/icons/gift-small.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 
     @include mixins.tablet {
+      padding: 133px 31px 59px 33px;
       background-image: url("../img/icons/gift.svg");
       background-position: 50% 57px;
+    }
+
+    @include mixins.desktop {
+      padding: 134px 50px 59px;
     }
   }
 }
 
 .advantages__sublist-title {
-  margin: 8px 0 16px 47px;
+  margin: 8px 0 16px;
   text-align: left;
 
   @include mixins.tablet {
     margin: 0;
     margin-bottom: 23px;
+    font-size: 21px;
+    line-height: 1.3;
     text-align: center;
+  }
+
+  @include mixins.tablet {
+    margin-bottom: 23px;
   }
 }
 
 .advantages__sublist-description {
-  margin-left: 47px;
   text-align: left;
 
   @include mixins.tablet {
-    margin: 0;
     text-align: center;
+  }
+}
+
+.advantages__sublist-description-wrap {
+  @include mixins.tablet {
+    display: inline-block;
+    max-width: 155px;
+  }
+
+  @include mixins.desktop {
+    max-width: 285px;
   }
 }

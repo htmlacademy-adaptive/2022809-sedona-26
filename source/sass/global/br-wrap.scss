@@ -1,0 +1,15 @@
+@use "./../mixins";
+@use "./../variables";
+
+br {
+  @include mixins.mobile-width-only {
+    display: none;
+  }
+}
+
+.br-desktop {
+  @media screen and (max-width: variables.$desktop-width) {
+    display: none;
+  }
+}
+

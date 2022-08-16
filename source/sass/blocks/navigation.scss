@@ -57,6 +57,19 @@ $item-margin: $item-width;
     transform: rotate(-45deg);
   }
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include mixins.tablet {
     display: none;
   }
