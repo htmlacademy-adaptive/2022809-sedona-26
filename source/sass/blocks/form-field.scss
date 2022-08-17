@@ -30,12 +30,16 @@
   }
 
   &--pick {
-    height: 46px;
+    min-height: 46px;
     align-items: center;
   }
 
   &--textarea {
     min-height: 150px;
+
+    @include mixins.tablet {
+      min-height: 160px;
+    }
   }
 }
 

@@ -1,8 +1,8 @@
 @use "./../variables";
 
 .input {
-  height: 58px;
-  padding: 16px 58px 16px 16px;
+  min-height: 58px;
+  padding: 12px 58px 12px 12px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
