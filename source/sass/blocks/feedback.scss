@@ -4,11 +4,11 @@
   padding: 35px 20px 28px;
 
   @include mixins.tablet {
-    padding: 52px 166px 99px;
+    padding: 52px 166px 102px;
   }
 
   @include mixins.desktop {
-    padding: 105px 382px 66px 380px;
+    padding: 105px 382px 69px 380px;
   }
 }
 
