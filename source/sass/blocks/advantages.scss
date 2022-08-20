@@ -80,13 +80,9 @@
   @include mixins.tablet {
     flex-grow: 1;
     flex-basis: 66.66%;
+    width: 100%;
     height: auto;
     object-fit: cover;
-    aspect-ratio: 2;
-  }
-
-  @include mixins.desktop {
-    aspect-ratio: 3.13;
   }
 }
 

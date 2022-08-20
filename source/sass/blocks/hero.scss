@@ -1,41 +1,97 @@
 @use "./../mixins";
 
+$hero-url-divider: url("../img/index/hero-divider.svg");
+$hero-bgc-gradient: linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
 .hero {
   padding: 90px 19px 85px;
   background-image:
-    url("../img/index/hero-divider-desk.svg"),
-    url("../img/index/banner-desk.jpg"),
-    linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    $hero-url-divider,
+    url("../img/index/hero-mobile.jpg"),
+    $hero-bgc-gradient;
   background-repeat: no-repeat, no-repeat;
-  background-position: center calc(100% + 0.5px), center -40px;
-  background-size: auto, auto;
+  background-position: center calc(100% + 0.5px), center;
+  background-size: auto, cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      $hero-url-divider,
+      url("../img/index/hero-mobile@2x.jpg"),
+      $hero-bgc-gradient;
+  }
 
   @include mixins.tablet {
     padding: 77px 60px 91px;
-    background-position: center calc(100% + 0.5px), center center;
-    background-size: auto auto, cover;
+    background-image:
+      $hero-url-divider,
+      url("../img/index/hero-tablet.jpg"),
+      $hero-bgc-gradient;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        $hero-url-divider,
+        url("../img/index/hero-tablet@2x.jpg"),
+        $hero-bgc-gradient;
+    }
   }
 
   @include mixins.desktop {
     padding: 78px 120px 90px;
+    background-image:
+      $hero-url-divider,
+      url("../img/index/hero-desktop.jpg"),
+      $hero-bgc-gradient;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        $hero-url-divider,
+        url("../img/index/hero-desktop@2x.jpg"),
+        $hero-bgc-gradient;
+    }
   }
 
   &--size-small {
     padding: 52px 19px 67px;
     background-image:
-      url("../img/index/hero-divider-desk.svg"),
-      url("../img/catalog/banner-small-desk.jpg"),
-      linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    background-position: center calc(100% + 0.5px), -390px -170px;
+      $hero-url-divider,
+      url("../img/catalog/hero-mobile-short.jpg"),
+      $hero-bgc-gradient;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        $hero-url-divider,
+        url("../img/catalog/hero-mobile-short@2x.jpg"),
+        $hero-bgc-gradient;
+    }
 
     @include mixins.tablet {
       padding: 95px 60px 117px;
-      background-position: center calc(100% + 0.5px), center bottom;
-      background-size: auto auto, auto;
+      background-image:
+        $hero-url-divider,
+        url("../img/catalog/hero-tablet-short.jpg"),
+        $hero-bgc-gradient;
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          $hero-url-divider,
+          url("../img/catalog/hero-tablet-short@2x.jpg"),
+          $hero-bgc-gradient;
+      }
     }
 
     @include mixins.desktop {
       padding: 101px 371.5px 120px 369px;
+      background-image:
+        $hero-url-divider,
+        url("../img/catalog/hero-desktop-short.jpg"),
+        $hero-bgc-gradient;
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          $hero-url-divider,
+          url("../img/catalog/hero-desktop-short@2x.jpg"),
+          $hero-bgc-gradient;
+      }
     }
   }
 }

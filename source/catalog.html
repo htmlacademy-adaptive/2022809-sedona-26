@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <div class="page__container">
@@ -37,7 +41,7 @@
       </header>
       <main class="main-container">
         <div class="hero hero--size-small">
-          <img class="hero__image" width="229" height="39" src="img/catalog/sedona-mob.svg" alt="Sedona">
+          <img class="hero__image" width="229" height="39" src="img/catalog/hero-sedona.svg" alt="Sedona">
         </div>
         <section class="gallery">
           <div class="gallery__heading-wrapper">
@@ -46,9 +50,11 @@
           </div>
           <div class="gallery__wrapper">
             <article class="gallery__card gallery-card gallery-card--max">
-              <a class="gallery-card__link gallery-card__link--max" href="">
-                <picture class="gallery-card__picture">
-                  <img class="gallery-card__image gallery-card__image--max" src="img/catalog/gallery-1-mob.jpg" width="280" height="280" alt="Автомобиль едет по дороге на фоне заката и гор">
+              <a class="gallery-card__link gallery-card__link--max" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/catalog/gallery-desktop-1.jpg 1x, img/catalog/gallery-desktop-1@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/gallery-tablet-1.jpg 1x, img/catalog/gallery-tablet-1@2x.jpg 2x">
+                  <img class="gallery-card__image gallery-card__image--max" src="img/catalog/gallery-mobile-1.jpg 1x" srcset="img/catalog/gallery-mobile-1@2x.jpg 2x" width="280" height="280" alt="Автомобиль едет по дороге на фоне заката и гор">
                 </picture>
               </a>
               <div class="gallery-card__content">
@@ -63,9 +69,11 @@
               </div>
             </article>
             <article class="gallery__card gallery-card">
-              <a class="gallery-card__link" href="">
+              <a class="gallery-card__link" href="#">
                 <picture>
-                  <img class="gallery-card__image" src="img/catalog/gallery-2-mob.jpg" width="280" height="280" alt="Местная растительность на размытом фоне гор">
+                  <source media="(min-width: 1200px)" srcset="img/catalog/gallery-desktop-2.jpg 1x, img/catalog/gallery-desktop-2@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/gallery-tablet-2.jpg 1x, img/catalog/gallery-tablet-2@2x.jpg 2x">
+                  <img class="gallery-card__image" src="img/catalog/gallery-mobile-2.jpg 1x" srcset="img/catalog/gallery-mobile-2@2x.jpg 2x" width="280" height="280" alt="Местная растительность на размытом фоне гор">
                 </picture>
               </a>
               <div class="gallery-card__content">
@@ -80,9 +88,11 @@
               </div>
             </article>
             <article class="gallery__card gallery-card">
-              <a class="gallery-card__link" href="">
-                <picture class="gallery-card__picture">
-                  <img class="gallery-card__image" src="img/catalog/gallery-3-mob.jpg"  width="280" height="280" alt="Горный серпантин посреди леса">
+              <a class="gallery-card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/catalog/gallery-desktop-3.jpg 1x, img/catalog/gallery-desktop-3@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/gallery-tablet-3.jpg 1x, img/catalog/gallery-tablet-3@2x.jpg 2x">
+                  <img class="gallery-card__image" src="img/catalog/gallery-mobile-3.jpg 1x" srcset="img/catalog/gallery-mobile-3@2x.jpg 2x" width="280" height="280" alt="Горный серпантин посреди леса">
                 </picture>
               </a>
               <div class="gallery-card__content gallery-card__content--extra">
@@ -97,9 +107,11 @@
               </div>
             </article>
             <article class="gallery__card gallery-card">
-              <a class="gallery-card__link" href="">
-                <picture class="gallery-card__picture">
-                  <img class="gallery-card__image" src="img/catalog/gallery-4-mob.jpg" width="280" height="280" alt="Мост дьявола на фоне гор">
+              <a class="gallery-card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/catalog/gallery-desktop-4.jpg 1x, img/catalog/gallery-desktop-4@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/gallery-tablet-4.jpg 1x, img/catalog/gallery-tablet-4@2x.jpg 2x">
+                  <img class="gallery-card__image" src="img/catalog/gallery-mobile-4.jpg 1x" srcset="img/catalog/gallery-mobile-4@2x.jpg 2x" width="280" height="280" alt="Мост дьявола на фоне гор">
                 </picture>
               </a>
               <div class="gallery-card__content gallery-card__content--extra">
