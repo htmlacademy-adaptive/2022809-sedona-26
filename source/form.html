@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
@@ -27,17 +31,17 @@
               <a class="navigation__link" href="catalog.html">Фото и видео</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Форма Отзыва</a>
+              <a class="navigation__link navigation__link--current" href="#">Форма Отзыва</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--current" href="https://htmlacademy.ru/intensive/adaptive">HTML ACADEMY</a>
+              <a class="navigation__link" href="https://htmlacademy.ru/intensive/adaptive">HTML ACADEMY</a>
             </li>
           </ul>
         </nav>
       </header>
       <main class="main-container">
         <div class="hero hero--size-small">
-          <img class="hero__image" width="229" height="39" src="img/catalog/sedona-mob.svg" alt="Sedona">
+          <img class="hero__image" width="229" height="39" src="img/catalog/hero-sedona.svg" alt="Sedona">
         </div>
         <section class="feedback">
           <div class="feedback__heading-wrapper">
@@ -99,7 +103,7 @@
               </ul>
             </div>
             <div class="feedback-form__group feedback-form__group--places">
-              <h2 class="feedback-form__title feedback-form__title--on-border heading-title"><span class="feedback-form__title-wrap">Посещенные достопримечательности:</span></h2>
+              <h2 class="feedback-form__title feedback-form__title--on-border heading-title">Посещенные достопримечательности:</h2>
               <ul class="feedback-form__list feedback-form__list--extra">
                 <li class="feedback-form__item">
                   <label class="feedback-form__field form-field form-field--pick">
@@ -187,10 +191,8 @@
     <div class="modal-success modal-success--active">
       <div class="modal-success__content">
         <h2 class="modal-success__title heading-title">Ваш отзыв отправлен!</h2>
-        <p class="modal-success__subtitle heading-subtitle">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-        <div class="modal-success__button-wrapper">
-          <button class="modal-success__button button" type="submit">Закрыть окно</button>
-        </div>
+        <p class="modal-success__subtitle heading-subtitle">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <span class="modal-success__subtitle-wrap">В ближайшее время мы опубликуем его на сайте.</span></p>
+        <button class="modal-success__button button" type="submit">Закрыть окно</button>
       </div>
     </div>
   <script src="./js/script.js"></script>

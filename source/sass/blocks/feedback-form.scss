@@ -17,13 +17,16 @@
   position: relative;
   border-top: 1px solid variables.$inert-color;
 
+  @include mixins.tablet {
+    border: none;
+  }
+
   &--name {
-    padding: 24px 20px 39px;
+    padding: 23px 20px 39px;
 
     @include mixins.tablet {
       padding: 0;
       margin-bottom: 61px;
-      border-top: none;
     }
 
     @include mixins.desktop {
@@ -32,12 +35,11 @@
   }
 
   &--contacts {
-    padding: 24px 20px 34px;
+    padding: 23px 20px 34px;
 
     @include mixins.tablet {
       padding: 0;
       margin-bottom: 61px;
-      border-top: none;
       border-left: 1px solid #d8d8d8;
     }
 
@@ -47,11 +49,11 @@
   }
 
   &--impression {
-    padding: 24px 20px;
+    padding: 23px 20px 24px;
 
     @include mixins.tablet {
       grid-column: -1 / 1;
-      padding: 0 0 74.5px;
+      padding: 0 0 75.5px;
     }
 
     @include mixins.desktop {
@@ -60,24 +62,24 @@
   }
 
   &--places {
-    padding: 24px 20px;
+    padding: 23px 20px 24px;
 
     @include mixins.tablet {
       grid-column: -1 / 1;
-      padding: 0 0 55px;
+      padding: 0 0 56px;
     }
 
     @include mixins.desktop {
-      padding: 0 0 69px;
+      padding: 0 0 70px;
     }
   }
 
   &--review {
-    padding: 24px 20px 56px;
+    padding: 23px 20px 56px;
 
     @include mixins.tablet {
       grid-column: -1 / 1;
-      padding: 41px 0 48px;
+      padding: 40px 0 49px;
     }
 
     @include mixins.desktop {
@@ -91,16 +93,38 @@
   margin-bottom: 20px;
 
   @include mixins.tablet {
-    margin-bottom: 28px;
+    margin-bottom: 27px;
     font-size: 21px;
+    line-height: 1.3;
 
     &--on-border {
       position: absolute;
-      min-width: 402px;
       top: 0;
       left: 50%;
+      display: grid;
+      grid-template-columns: auto minmax(auto, 400px) auto;
+      align-items: center;
+      width: 100%;
+      margin: 0;
       transform: translate(-50%, -50%);
-      background-color: variables.$add-color-light;
+    }
+
+    &--on-border::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      top: 50%;
+      background-color: variables.$inert-color;
+    }
+
+    &--on-border::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      top: 50%;
+      background-color: variables.$inert-color;
     }
   }
 
@@ -113,11 +137,6 @@
       margin-left: 0;
     }
   }
-}
-
-.feedback-form__title-wrap {
-  display: inline-block;
-  max-width: 402px;
 }
 
 .feedback-form__wrapper {
@@ -164,19 +183,19 @@
   }
 
   @include mixins.desktop {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr) auto;
     gap: 28px;
     padding: 58px 53px 17px;
   }
 
   &--extra {
     @include mixins.tablet {
-      gap: 32px;
-      padding: 54.5px 84px 0;
+      gap: 16px 32px;
+      padding: 53.5px 84px 0;
     }
 
     @include mixins.desktop {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, auto);
       gap: 64px;
       padding: 85.5px 44.5px 31px;
     }
@@ -186,7 +205,7 @@
 .feedback-form__submit {
   display: flex;
   flex-direction: column;
-  padding: 0 20px 24px;
+  padding: 0 20px 24px 19px;
 
   @include mixins.tablet {
     grid-column: -1 / 1;
@@ -203,9 +222,16 @@
 
 .feedback-form__button {
   min-width: 280px;
+  margin-bottom: 3px;
 
   @include mixins.tablet {
     min-width: 324px;
+    margin-bottom: 0;
+    padding: 18.5px 60px 13.5px 49px;
+  }
+
+  @include mixins.desktop {
+    min-width: 384px;
   }
 }
 

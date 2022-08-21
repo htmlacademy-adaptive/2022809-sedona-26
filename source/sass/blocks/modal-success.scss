@@ -1,6 +1,9 @@
 @use "./../variables";
 @use "./../mixins";
 
+$gradient-bottom: 98px;
+$gradient-top: 98px;
+
 .modal-success {
   position: fixed;
   top: 0;
@@ -20,53 +23,61 @@
 .modal-success__content {
   max-width: 320px;
   margin: auto;
-  padding-top: 39px;
-  background-color: variables.$add-color-light;
+  padding: 36px 20px 20px;
+  background: linear-gradient(variables.$add-color-light calc(100% - 98px), variables.$inert-light 98px);
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 
   @include mixins.tablet {
     max-width: 640px;
-    padding-top: 53px;
+    padding: 41px 91px 44px;
+    background: linear-gradient(variables.$add-color-light calc(100% - 146px), variables.$inert-light 146px);
+  }
+
+  @include mixins.desktop {
+    padding: 39px 91px 44px;
   }
 }
 
 .modal-success__title {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 
   @include mixins.tablet {
-    margin-bottom: 23px;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  @include mixins.desktop {
+    margin-bottom: 22px;
   }
 }
 
 .modal-success__subtitle {
-  margin-bottom: 54px;
-  padding: 0 38px;
+  margin-bottom: 73px;
+  padding: 0 31px;
 
   @include mixins.tablet {
-    margin-bottom: 53px;
-    padding: 0 98px;
+    margin-bottom: 97px;
+    padding: 0 22px;
   }
 
   @include mixins.desktop {
-    margin-bottom: 46px;
+    padding: 0 22px 0 18px;
   }
 }
 
-.modal-success__button-wrapper {
-  padding: 20px;
-  background-color: variables.$inert-light;
-
-  @include mixins.tablet {
-    padding: 44px;
-  }
+.modal-success__subtitle-wrap {
+  display: inline-block;
 }
 
 .modal-success__button {
   display: block;
   min-width: 280px;
   margin: 0 auto;
+  padding: 18px 62px 14px 60px;
+  font-size: 18px;
 
   @include mixins.tablet {
     min-width: 458px;
+    font-size: 21px;
   }
 }

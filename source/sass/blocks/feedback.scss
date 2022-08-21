@@ -1,14 +1,14 @@
 @use "./../mixins";
 
 .feedback__heading-wrapper {
-  padding: 36px 20px 28px;
+  padding: 35px 20px 28px;
 
   @include mixins.tablet {
-    padding: 62px 167px 102px;
+    padding: 52px 166px 102px;
   }
 
   @include mixins.desktop {
-    padding: 115px 383px 67px;
+    padding: 105px 382px 69px 380px;
   }
 }
 
@@ -16,12 +16,12 @@
   margin-bottom: 24px;
 
   @include mixins.tablet {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-size: 30px;
   }
 
   @include mixins.desktop {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
 }
 

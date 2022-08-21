@@ -5,11 +5,11 @@
   padding: 17px 20px 0;
 
   @include mixins.tablet {
-    padding: 58px 60px 40px;
+    padding: 46px 60px 40px;
   }
 
   @include mixins.desktop {
-    padding: 62px 200px 66px;
+    padding: 50px 201px 84px 199px;
   }
 }
 
@@ -17,11 +17,11 @@
   padding: 0 20px 38px;
 
   @include mixins.tablet {
-    padding: 0 101.5px 65px;
+    padding: 0 101.5px 91px;
   }
 
   @include mixins.desktop {
-    padding: 0 177.5px 64px;
+    padding: 0 177.5px 88px;
   }
 }
 
@@ -29,7 +29,7 @@
   margin-bottom: 27px;
 
   @include mixins.tablet {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
     font-size: 30px;
   }
 }
@@ -39,16 +39,22 @@
 }
 
 .promo__video {
+  display: block;
   width: 100%;
 
   @include mixins.tablet {
-    height: 500px;
+    min-height: 500px;
   }
 }
 
 .promo__button {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 124px;
+  transform: translate(0, -50%);
+
+  @include mixins.tablet {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

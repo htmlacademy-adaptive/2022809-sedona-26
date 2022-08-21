@@ -9,7 +9,6 @@
 
   @include mixins.tablet {
     flex-direction: row;
-    justify-content: space-between;
     padding: 36px 60px;
   }
 
@@ -32,7 +31,12 @@
 
   @include mixins.tablet {
     margin: 0;
+    margin-right: 111px;
     padding: 0;
+  }
+
+  @include mixins.desktop {
+    margin-right: 266px;
   }
 }
 
@@ -42,5 +46,6 @@
 
   @include mixins.tablet {
     margin: 0;
+    margin-right: auto;
   }
 }
