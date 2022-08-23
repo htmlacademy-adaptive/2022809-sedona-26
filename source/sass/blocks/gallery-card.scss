@@ -169,6 +169,6 @@
   fill: rgba(variables.$basic-text, 0.3);
 
   @include mixins.desktop {
-    fill: rgba(variables.$add-color-light, 1);
+    fill: variables.$add-color-light;
   }
 }
