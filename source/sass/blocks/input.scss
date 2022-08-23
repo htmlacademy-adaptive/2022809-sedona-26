@@ -27,4 +27,11 @@
     border-color: variables.$inert-color;
     background-color: variables.$add-color-light;
   }
+
+  &:disabled,
+  &:hover:disabled,
+  &:focus:disabled {
+    background-color: variables.$inert-color;
+    color: rgba(variables.$basic-text, 0.3);
+  }
 }

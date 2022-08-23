@@ -54,12 +54,9 @@
     z-index: 2;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     opacity: 0.9;
     outline: none;
-  }
-
-  &:focus-within {
-    outline: 2px solid variables.$basic-color;
   }
 }

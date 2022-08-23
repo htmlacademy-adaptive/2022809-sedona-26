@@ -23,8 +23,12 @@ $item-margin: $item-width;
     }
 
     &--nojs {
-      position: static;
+      display: block;
       z-index: 1;
+    }
+
+    &--nojs .navigation__toggle {
+      display: none;
     }
   }
 }
@@ -111,11 +115,11 @@ $item-margin: $item-width;
     flex-basis: $item-width;
 
     &:not(:first-of-type) {
-      border-top: none;
+      box-shadow: none;
     }
 
     &:not(:last-of-type) {
-      border-bottom: none;
+      box-shadow: none;
     }
 
     &:nth-child(4n-2) {

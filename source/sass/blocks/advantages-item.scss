@@ -1,6 +1,6 @@
 @use "./../mixins";
 @use "./../variables";
-
+// Advantages Items
 .advantages-item {
   position: relative;
 
@@ -9,7 +9,7 @@
     min-height: 256px;
     padding: 42px 20px 20px;
   }
-
+  // Item count modifier
   &--number {
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
       margin-bottom: 23px;
     }
   }
-
+  // Item color theme
   &--dark {
     padding: 39px 16px 35px;
     color: variables.$add-color-light;
@@ -47,7 +47,7 @@
       padding: 50px 83px 20px;
     }
   }
-
+  // Item color theme
   &--medium {
     padding: 24.5px 35px;
     color: variables.$basic-text-medium;
@@ -57,7 +57,7 @@
       padding: 42px 39px 20px;
     }
   }
-
+  // Item with top divider
   &--primary {
     padding: 68px 20px 40px 16px;
 
