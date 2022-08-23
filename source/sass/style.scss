@@ -39,5 +39,6 @@
 @use "./blocks/textarea.scss";
 
 // Modals
+@use "./blocks/modal-backdrop.scss";
 @use "./blocks/modal-error.scss";
 @use "./blocks/modal-success.scss";

@@ -26,4 +26,8 @@
     border-color: variables.$inert-color;
     background-color: variables.$add-color-light;
   }
+
+  &:disabled {
+    background-color: variables.$inert-color;
+  }
 }

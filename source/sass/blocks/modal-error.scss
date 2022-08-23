@@ -2,31 +2,20 @@
 @use "./../mixins";
 
 .modal-error {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(variables.$basic-text, 0.3);
-  display: none;
-
-  &--active {
-    display: none;
-    // display: flex;
-  }
-}
-
-.modal-error__content {
   max-width: 320px;
   margin: auto;
   padding: 45px 41.5px 35px;
   background-color: variables.$add-color-light;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  display: none;
 
   @include mixins.tablet {
     max-width: 400px;
     padding: 36px 46.5px 49px;
+  }
+
+  &--active {
+    display: block;
   }
 }
 

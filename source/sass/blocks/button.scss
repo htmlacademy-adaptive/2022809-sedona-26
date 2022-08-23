@@ -1,5 +1,5 @@
 @use "./../variables";
-
+// Basic button
 .button {
   padding: 16px 40px;
 
@@ -26,10 +26,12 @@
     color: rgba(variables.$add-color-light, 0.3);
     background-color: variables.$basic-dark;
   }
-
-  &--disabled {
+  // Disabled modifier for button links
+  &--disabled,
+  &:disabled {
     background-color: variables.$inert-color;
     cursor: default;
+    pointer-events: none;
 
     &:hover,
     &:focus,

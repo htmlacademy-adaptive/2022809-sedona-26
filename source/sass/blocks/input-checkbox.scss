@@ -36,3 +36,13 @@
 .form-field:active .input-checkbox__label::after {
   opacity: 0.3;
 }
+
+.input-checkbox:checked:disabled + .input-checkbox__label::after {
+  opacity: 0.3;
+}
+
+.input-checkbox:disabled + .input-checkbox__label::before,
+.input-checkbox:disabled:hover + .input-checkbox__label::before {
+  background-color: variables.$inert-color;
+  cursor: default;
+}

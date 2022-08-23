@@ -36,3 +36,14 @@
 .form-field:active .input-radio__label::after {
   opacity: 0.3;
 }
+
+.input-radio:checked:disabled + .input-radio__label::after {
+  opacity: 0.3;
+}
+
+.input-radio:disabled + .input-radio__label::before,
+.input-radio:disabled:hover + .input-radio__label::before,
+.input-radio:disabled:focus-within + .input-radio__label::before {
+  background-color: variables.$inert-color;
+  cursor: default;
+}

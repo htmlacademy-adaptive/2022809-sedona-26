@@ -1,5 +1,5 @@
 @use "./../mixins";
-
+// Advantages section
 .advantages {
   padding-top: 32px;
 
@@ -46,7 +46,7 @@
     flex-wrap: wrap;
   }
 }
-
+//  Element for grouping compound items
 .advantages__unit {
   display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@
     flex-basis: 100%;
   }
 }
-
+// Element for item with picture
 .advantages__figure {
   margin: 0;
   padding: 0;
