@@ -94,6 +94,7 @@
 
   @include mixins.tablet {
     margin-bottom: 27px;
+    padding: 0 83px 0 81px;
     font-size: 21px;
     line-height: 1.3;
     // Header with decorative sidelines
@@ -130,11 +131,11 @@
   // Нeader extra margin
   &--extra {
     @include mixins.tablet {
-      margin-left: 6px;
+      padding: 0 19px 0 26px;
     }
 
     @include mixins.desktop {
-      margin-left: 0;
+      margin-left: -8px;
     }
   }
 }
@@ -223,6 +224,7 @@
 .feedback-form__button {
   min-width: 280px;
   margin-bottom: 3px;
+  padding: 18.5px 34px 13.5px 32px;
 
   @include mixins.tablet {
     min-width: 324px;
@@ -245,5 +247,6 @@
 
   @include mixins.tablet {
     font-size: 14px;
+    padding-left: 20px;
   }
 }

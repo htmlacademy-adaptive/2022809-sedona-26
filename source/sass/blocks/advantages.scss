@@ -100,66 +100,63 @@
   }
 }
 
+.advantages__sublist-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include mixins.tablet {
+    width: 75px;
+    height: auto;
+    top: 58px;
+    left: 49%;
+    transform: translateX(-49%);
+  }
+}
+
 .advantages__sublist-item {
   position: relative;
 
   @include mixins.tablet {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     flex-basis: 33.33%;
     min-height: 330px;
   }
 
   &--house {
     padding: 0 0 21px 46px;
-    background-image: url("../img/icons/house-small.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
 
     @include mixins.tablet {
-      padding: 155px 36px 59px;
-      background-image: url("../img/icons/house.svg");
-      background-position: 50% 60px;
+      padding: 158px 36px 59px;
     }
 
     @include mixins.desktop {
-      padding: 138px 50px 59px;
+      padding: 159px 50px 58px;
     }
   }
 
   &--food {
     padding: 0 0 21px 51px;
-    background-image: url("../img/icons/food-small.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
 
     @include mixins.tablet {
-      padding: 155px 35px 59px 36px;
-      background-image: url("../img/icons/food.svg");
-      background-position: 50% 63px;
+      padding: 158px 35px 59px 36px;
     }
 
     @include mixins.desktop {
-      padding: 134px 50px 59px;
+      padding: 157px 50px 59px;
     }
   }
 
   &--gift {
     padding: 0 0 21px 43px;
-    background-image: url("../img/icons/gift-small.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
 
     @include mixins.tablet {
-      padding: 133px 31px 59px 33px;
-      background-image: url("../img/icons/gift.svg");
-      background-position: 50% 57px;
+      padding: 158px 31px 59px 33px;
     }
 
     @include mixins.desktop {
-      padding: 134px 50px 59px;
+      padding: 159px 50px 59px;
     }
   }
 }
@@ -176,8 +173,8 @@
     text-align: center;
   }
 
-  @include mixins.tablet {
-    margin-bottom: 23px;
+  @include mixins.desktop {
+    margin-bottom: 21px;
   }
 }
 
