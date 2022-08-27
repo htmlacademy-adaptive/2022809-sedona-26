@@ -47,49 +47,13 @@
 
 .gallery-card__link {
   display: block;
-
-  @include mixins.tablet {
-    margin: 0;
-    flex-basis: 76.95%;
-
-    &--max {
-      flex-basis: 83.33%;
-    }
-  }
-
-  @include mixins.desktop {
-    flex-basis: 100%;
-
-    &--max {
-      flex-basis: 100%;
-    }
-  }
-}
-
-.gallery-card__picture {
-  display: block;
 }
 
 .gallery-card__image {
   display: block;
   width: 100%;
-
-  @include mixins.tablet {
-    height: 100%;
-    aspect-ratio: 1.21;
-
-    &--max {
-      aspect-ratio: 1.62;
-    }
-  }
-
-  @include mixins.desktop {
-    aspect-ratio: 1.5;
-
-    &--max {
-      aspect-ratio: 3;
-    }
-  }
+  height: auto;
+  object-fit: contain;
 }
 
 .gallery-card__content {
@@ -99,7 +63,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr auto;
-    padding: 22px 20px 15px;
+    padding: 22px 100px 15px 20px;
   }
 
   @include mixins.desktop {
@@ -110,7 +74,7 @@
     background-color: rgba(variables.$basic-text, 0.3);
 
     &--extra {
-      padding: 20px;
+      padding: 20px 100px 20px 20px;
     }
   }
 }

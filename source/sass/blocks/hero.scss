@@ -103,7 +103,7 @@ $hero-bgc-gradient: linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 2
   object-fit: contain;
 
   @include mixins.tablet {
-    width: 460px;
+    min-width: 460px;
     height: auto;
   }
 }

@@ -18,18 +18,16 @@
   &:focus .copyright__icon {
     outline: none;
     color: variables.$basic-color;
-    fill: variables.$basic-color;
   }
 
   &:active,
   &:active .copyright__icon {
     color: variables.$add-text-light;
-    fill: variables.$add-text-light;
   }
 }
 
 .copyright__icon {
-  fill: variables.$basic-text;
+  fill: currentColor;
 }
 
 .copyright__text {

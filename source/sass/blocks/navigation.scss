@@ -152,7 +152,7 @@ $item-margin: $item-width;
   }
 
   @include mixins.tablet {
-    padding: 18px 0 17px;
+    padding: 18px 10px 17px;
     font-size: 14px;
     line-height: 21px;
     color: variables.$basic-text;
