@@ -14,7 +14,7 @@
     right: 0;
     bottom: 0;
     background-color: #e6e6e6;
-    background-image: url("../img/icons/phone.svg");
+    background-image: url("../img/svg/phone.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -24,16 +24,16 @@
     right: 0;
     bottom: 0;
     background-color: #e6e6e6;
-    background-image: url("../img/icons/envelope.svg");
+    background-image: url("../img/svg/envelope.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
-
+  // Field with checkbox and radio button
   &--pick {
     min-height: 46px;
     align-items: center;
   }
-
+  // Field with textarea
   &--textarea {
     min-height: 150px;
 
@@ -42,11 +42,11 @@
     }
   }
 }
-
+// Class for input
 .form-field__control {
   width: 100%;
 }
-
+// Class for input label
 .form-field__label {
   padding-left: 62px;
 

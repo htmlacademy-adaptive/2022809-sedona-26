@@ -12,7 +12,7 @@
     padding: 0 120px 64px;
   }
 }
-// Groups of fields united by meaning
+// Group of fields united by meaning
 .feedback-form__group {
   position: relative;
   border-top: 1px solid variables.$inert-color;
@@ -107,18 +107,11 @@
       align-items: center;
       width: 100%;
       margin: 0;
+      padding: 0;
       transform: translate(-50%, -50%);
     }
-
-    &--on-border::before {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 1px;
-      top: 50%;
-      background-color: variables.$inert-color;
-    }
-
+    // Decorative lines
+    &--on-border::before,
     &--on-border::after {
       content: "";
       display: block;
@@ -139,7 +132,7 @@
     }
   }
 }
-
+// Content wrapper for 1st and 2nd field groups
 .feedback-form__wrapper {
   display: flex;
   flex-direction: column;
@@ -202,7 +195,7 @@
     }
   }
 }
-
+// Wrapper for button and legend
 .feedback-form__submit {
   display: flex;
   flex-direction: column;

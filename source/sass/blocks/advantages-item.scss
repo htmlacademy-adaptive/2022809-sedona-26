@@ -15,7 +15,7 @@
     flex-direction: column;
     align-items: center;
   }
-
+  // Counter
   &--number::before {
     display: block;
     counter-increment: number;
@@ -33,7 +33,7 @@
       margin-bottom: 23px;
     }
   }
-  // Item color theme
+  // Dark color item
   &--dark {
     padding: 39px 16px 35px;
     color: variables.$add-color-light;
@@ -47,7 +47,7 @@
       padding: 50px 83px 20px;
     }
   }
-  // Item color theme
+  // Medium color item
   &--medium {
     padding: 24.5px 35px;
     color: variables.$basic-text-medium;
@@ -69,13 +69,13 @@
       padding: 47px 55.5px 20px;
     }
   }
-
+  // Item top divider
   &--primary::after {
     @include mixins.before-after(absolute, 100%, 37px);
     top: 0;
     left: 50%;
     transform: translate(-50%);
-    background-image: url("../img/index/advantages-divider.svg");
+    background-image: url("../img/svg/advantages-divider.svg");
     background-repeat: no-repeat;
     background-size: cover;
 

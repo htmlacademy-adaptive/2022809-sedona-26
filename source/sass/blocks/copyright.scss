@@ -13,15 +13,12 @@
   text-decoration: none;
 
   &:hover,
-  &:focus,
-  &:hover .copyright__icon,
-  &:focus .copyright__icon {
+  &:focus {
     outline: none;
     color: variables.$basic-color;
   }
 
-  &:active,
-  &:active .copyright__icon {
+  &:active {
     color: variables.$add-text-light;
   }
 }
