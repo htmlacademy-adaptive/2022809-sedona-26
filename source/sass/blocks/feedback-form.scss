@@ -53,11 +53,11 @@
 
     @include mixins.tablet {
       grid-column: -1 / 1;
-      padding: 0 0 75.5px;
+      padding: 0 0 75px;
     }
 
     @include mixins.desktop {
-      padding: 0 0 82.5px;
+      padding: 0 0 83px;
     }
   }
 
@@ -66,11 +66,11 @@
 
     @include mixins.tablet {
       grid-column: -1 / 1;
-      padding: 0 0 56px;
+      padding: 0 0 55px;
     }
 
     @include mixins.desktop {
-      padding: 0 0 70px;
+      padding: 0 0 69px;
     }
   }
 
@@ -79,12 +79,7 @@
 
     @include mixins.tablet {
       grid-column: -1 / 1;
-      padding: 40px 0 49px;
-    }
-
-    @include mixins.desktop {
-      grid-column: -1 / 1;
-      padding: 41px 96px 48px;
+      padding: 0 0 48px;
     }
   }
 }
@@ -99,8 +94,7 @@
     line-height: 1.3;
     // Header with decorative sidelines
     &--on-border {
-      position: absolute;
-      top: 0;
+      position: relative;
       left: 50%;
       display: grid;
       grid-template-columns: auto minmax(auto, 400px) auto;
@@ -173,26 +167,36 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-    padding: 41px 36px 0;
+    padding: 14px 36px 0;
   }
 
   @include mixins.desktop {
     grid-template-columns: repeat(2, 1fr) auto;
     gap: 28px;
-    padding: 58px 53px 17px;
+    padding: 31px 53px 17px;
   }
 
   &--extra {
     @include mixins.tablet {
       gap: 16px 32px;
-      padding: 53.5px 84px 0;
+      padding: 0 84px 0;
     }
 
     @include mixins.desktop {
       grid-template-columns: repeat(4, auto);
       gap: 64px;
-      padding: 85.5px 44.5px 31px;
+      padding: 31px 44.5px;
     }
+  }
+}
+// Wrapper for textarea
+.feedback-form__field-wrapper {
+  @include mixins.tablet {
+    padding-top: 13px;
+  }
+
+  @include mixins.desktop {
+    padding: 13px 96px 0;
   }
 }
 // Wrapper for button and legend
