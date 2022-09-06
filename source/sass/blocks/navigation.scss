@@ -1,6 +1,6 @@
 @use "./../mixins";
 @use "./../variables";
-
+// Variables for tablet and more width
 $item-width: 20%;
 $item-margin: $item-width;
 
@@ -11,17 +11,18 @@ $item-margin: $item-width;
   min-height: 100%;
 
   @include mixins.mobile-width-only {
+    // Open menu state
     &--opened {
       position: absolute;
       top: 0;
       height: 0;
       min-width: 100%;
     }
-
+    // Close menu state
     &--closed {
       display: none;
     }
-
+    // Menu state without javascript
     &--nojs {
       display: block;
       z-index: 1;
@@ -113,12 +114,9 @@ $item-margin: $item-width;
 
   @include mixins.tablet {
     flex-basis: $item-width;
+    box-shadow: none;
 
-    &:not(:first-of-type) {
-      box-shadow: none;
-    }
-
-    &:not(:last-of-type) {
+    &:first-of-type {
       box-shadow: none;
     }
 
