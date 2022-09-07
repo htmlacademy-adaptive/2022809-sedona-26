@@ -93,6 +93,8 @@ const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/img/favicons/*.{png,svg}',
+    'source/js/*.js',
+    'source/*.html',
     'source/*.ico',
     'source/*.webmanifest',
   ], {
@@ -161,8 +163,6 @@ export default gulp.series(
   copyImages,
   gulp.parallel(
     styles,
-    html,
-    scripts,
     svg,
     sprite,
     createWebp

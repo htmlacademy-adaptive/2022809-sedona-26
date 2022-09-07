@@ -61,26 +61,17 @@
   &--primary {
     padding: 68px 20px 40px 16px;
 
+    background-image: url("../img/svg/advantages-divider.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+
     @include mixins.tablet {
       padding: 39px 32px 44px;
+      background-image: none;
     }
 
     @include mixins.desktop {
       padding: 47px 55.5px 20px;
-    }
-  }
-  // Item top divider
-  &--primary::after {
-    @include mixins.before-after(absolute, 100%, 37px);
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
-    background-image: url("../img/svg/advantages-divider.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @include mixins.tablet {
-      display: none;
     }
   }
 }
