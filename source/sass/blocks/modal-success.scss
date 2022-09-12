@@ -7,7 +7,7 @@
   padding: 36px 20px 20px;
   background: linear-gradient(variables.$add-color-light calc(100% - 98px), variables.$inert-light 98px);
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
-  display: none;
+  display: block;
 
   @include mixins.tablet {
     max-width: 640px;
@@ -17,10 +17,6 @@
 
   @include mixins.desktop {
     padding: 39px 91px 44px;
-  }
-
-  &--active {
-    display: block;
   }
 }
 

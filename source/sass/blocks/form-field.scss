@@ -64,3 +64,19 @@
     text-transform: uppercase;
   }
 }
+
+.form-field__label-radio::before {
+  @include mixins.before-after(absolute, 46px, 46px);
+  top: 0;
+  left: 0;
+  background-color: variables.$inert-light;
+  border-radius: 50%;
+}
+
+.form-field__label-checkbox::before {
+  @include mixins.before-after(absolute, 46px, 46px);
+  top: 0;
+  left: 0;
+  background-color: variables.$inert-light;
+  border-radius: 4px;
+}
