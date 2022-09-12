@@ -11,9 +11,8 @@
 
 .input-radio:checked + .input-radio__label::after {
   @include mixins.before-after(absolute, 16px, 16px);
-  top: 50%;
+  top: 15px;
   left: 16px;
-  transform: translate(0, -50%);
 
   background-color: variables.$basic-text-medium;
   border-radius: 50%;
