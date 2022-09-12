@@ -50,7 +50,7 @@
 .form-field__label {
   padding-left: 62px;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -63,4 +63,20 @@
     font-weight: 400;
     text-transform: uppercase;
   }
+}
+
+.form-field__label-radio::before {
+  @include mixins.before-after(absolute, 46px, 46px);
+  top: 0;
+  left: 0;
+  background-color: variables.$inert-light;
+  border-radius: 50%;
+}
+
+.form-field__label-checkbox::before {
+  @include mixins.before-after(absolute, 46px, 46px);
+  top: 0;
+  left: 0;
+  background-color: variables.$inert-light;
+  border-radius: 4px;
 }

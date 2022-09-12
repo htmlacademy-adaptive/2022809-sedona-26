@@ -1,49 +1,40 @@
 @use "./../mixins";
 @use "./../variables";
 
-.input-radio__label::before {
-  @include mixins.before-after(absolute, 46px, 46px);
-  top: 0;
-  left: 0;
-  background-color: variables.$inert-light;
-  border-radius: 50%;
-}
-
-.input-radio:checked + .input-radio__label::after {
+.input-radio:checked + .form-field__label-radio::after {
   @include mixins.before-after(absolute, 16px, 16px);
-  top: 50%;
+  top: 15px;
   left: 16px;
-  transform: translate(0, -50%);
 
   background-color: variables.$basic-text-medium;
   border-radius: 50%;
 }
 
-.form-field:hover .input-radio__label::before {
+.form-field:hover .form-field__label-radio::before {
   background-color: variables.$inert-color;
   cursor: pointer;
 }
 
-.form-field:focus-within .input-radio__label::before {
+.form-field:focus-within .form-field__label-radio::before {
   outline: none;
   background-color: variables.$inert-color;
 }
 
-.form-field:active .input-radio__label::before {
+.form-field:active .form-field__label-radio::before {
   background-color: variables.$inert-dark;
 }
 
-.form-field:active .input-radio__label::after {
+.form-field:active .form-field__label-radio::after {
   opacity: 0.3;
 }
 
-.input-radio:checked:disabled + .input-radio__label::after {
+.input-radio:checked:disabled + .form-field__label-radio::after {
   opacity: 0.3;
 }
 
-.input-radio:disabled + .input-radio__label::before,
-.input-radio:disabled:hover + .input-radio__label::before,
-.input-radio:disabled:focus-within + .input-radio__label::before {
+.input-radio:disabled + .form-field__label-radio::before,
+.input-radio:disabled:hover + .form-field__label-radio::before,
+.input-radio:disabled:focus-within + .form-field__label-radio::before {
   background-color: variables.$inert-color;
   cursor: default;
 }

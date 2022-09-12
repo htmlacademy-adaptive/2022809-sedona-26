@@ -4,16 +4,12 @@ let pageToggle = document.querySelector('.page-header__toggle');
 
 nav.classList.remove('navigation--nojs');
 
-pageToggle.addEventListener('click', function () {
-  if (nav.classList.contains('navigation--closed')) {
-    nav.classList.remove('navigation--closed');
-    nav.classList.add('navigation--opened');
-  }
-});
+pageToggle.onclick = function() {
+  nav.classList.toggle('navigation--opened');
+  nav.classList.toggle('navigation--closed');
+};
 
-navToggle.addEventListener('click', function () {
-  if (nav.classList.contains('navigation--opened')) {
-    nav.classList.remove('navigation--opened');
-    nav.classList.add('navigation--closed');
-  }
-});
+navToggle.onclick = function() {
+  nav.classList.toggle('navigation--closed');
+  nav.classList.toggle('navigation--opened');
+};

@@ -10,6 +10,8 @@
   @include mixins.tablet {
     flex-direction: row;
     padding: 36px 60px;
+    justify-content: space-between;
+    align-items: center;
   }
 
   @include mixins.desktop {
@@ -20,9 +22,8 @@
 .page-footer__hashtag {
   margin: 0;
   margin-bottom: 32.5px;
-  padding: 0 58px 0 56px;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -33,13 +34,7 @@
   @include mixins.tablet {
     max-width: 166px;
     margin: 0;
-    margin-right: 111px;
-    padding: 0;
     text-align: left;
-  }
-
-  @include mixins.desktop {
-    margin-right: 266px;
   }
 }
 
@@ -49,6 +44,5 @@
 
   @include mixins.tablet {
     margin: 0;
-    margin-right: auto;
   }
 }

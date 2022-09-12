@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Помогите отелям Седоны стать еще лучше! Ваш честный отзыв о посещенном отеле и достопримечательностях сделает маленький вклад в развитие нашего городка.">
     <title>HTML Academy: Седона</title>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <div class="page__container">
@@ -46,7 +49,7 @@
         <section class="feedback">
           <div class="feedback__heading-wrapper">
             <h1 class="feedback__title heading-title">Оставьте свой отзыв</h1>
-            <p class="feedback__subtitle heading-subtitle">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+            <p class="feedback__subtitle heading-subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           </div>
           <form class="feedback__form feedback-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="feedback-form__group feedback-form__group--name">
@@ -85,19 +88,19 @@
                 <li class="feedback-form__item">
                   <label class="feedback-form__field form-field form-field--pick">
                     <input class="form-field__control input-radio visually-hidden" type="radio" value="positive" name="impression">
-                    <span class="form-field__label input-radio__label">Скорее положительное</span>
+                    <span class="form-field__label form-field__label-radio">Скорее положительное</span>
                   </label>
                 </li>
                 <li class="feedback-form__item">
                   <label class="feedback-form__field form-field form-field--pick">
                     <input class="form-field__control input-radio visually-hidden" type="radio" value="negative" name="impression">
-                    <span class="form-field__label input-radio__label">Скорее отрицательное</span>
+                    <span class="form-field__label form-field__label-radio">Скорее отрицательное</span>
                   </label>
                 </li>
                 <li class="feedback-form__item">
                   <label class="feedback-form__field form-field form-field--pick">
                     <input class="form-field__control input-radio visually-hidden" type="radio" value="neutral" name="impression">
-                    <span class="form-field__label input-radio__label">Затрудняюсь ответить</span>
+                    <span class="form-field__label form-field__label-radio">Затрудняюсь ответить</span>
                   </label>
                 </li>
               </ul>
@@ -108,25 +111,25 @@
                 <li class="feedback-form__item">
                   <label class="feedback-form__field form-field form-field--pick">
                     <input class="form-field__control input-checkbox visually-hidden" type="checkbox" name="devil-bridge">
-                    <span class="form-field__label input-checkbox__label">Мост Дьявола</span>
+                    <span class="form-field__label form-field__label-checkbox">Мост Дьявола</span>
                   </label>
                 </li>
                 <li class="feedback-form__item">
                   <label class="feedback-form__field form-field form-field--pick">
                     <input class="form-field__control input-checkbox visually-hidden" type="checkbox" name="mountain-bell">
-                    <span class="form-field__label input-checkbox__label">Гора-Колокол</span>
+                    <span class="form-field__label form-field__label-checkbox">Гора-Колокол</span>
                   </label>
                 </li>
                 <li class="feedback-form__item">
                   <label class="feedback-form__field form-field form-field--pick">
                     <input class="form-field__control input-checkbox visually-hidden" type="checkbox" name="slide-park">
-                    <span class="form-field__label input-checkbox__label">Слайд-парк</span>
+                    <span class="form-field__label form-field__label-checkbox">Слайд-парк</span>
                   </label>
                 </li>
                 <li class="feedback-form__item">
                   <label class="feedback-form__field form-field form-field--pick">
                     <input class="form-field__control input-checkbox visually-hidden" type="checkbox" name="red-rocks">
-                    <span class="form-field__label input-checkbox__label">Красные скалы</span>
+                    <span class="form-field__label form-field__label-checkbox">Красные скалы</span>
                   </label>
                 </li>
               </ul>
@@ -189,6 +192,8 @@
         <p class="modal-error__subtitle heading-subtitle">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="modal-error__button button" type="submit">ОК</button>
       </div>
+    </div>
+    <div class="modal-backdrop modal-backdrop--close">
       <div class="modal-success">
         <h2 class="modal-success__title heading-title">Ваш отзыв отправлен!</h2>
         <p class="modal-success__subtitle heading-subtitle">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <span class="modal-success__subtitle-wrap">В ближайшее время мы опубликуем его на сайте.</span></p>

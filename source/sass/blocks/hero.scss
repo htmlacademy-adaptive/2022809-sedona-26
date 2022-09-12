@@ -80,11 +80,12 @@ $hero-bgc-gradient: linear-gradient(0deg, rgba(129, 179, 210, 1) 0%, rgba(255, 2
     }
 
     @include mixins.desktop {
-      padding: 101px 371.5px 120px 369px;
+      padding: 102px 0 119px;
       background-image:
         $hero-url-divider,
         url("../img/catalog/hero-desktop-short.jpg"),
         $hero-bgc-gradient;
+      background-position: center calc(100% + 0.5px), center -56px;
 
       @media (min-resolution: 2dppx) {
         background-image:
